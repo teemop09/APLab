@@ -1,0 +1,22 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1082" height="1408" viewBox="0 0 1082 1408">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ff6e6e;
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #0c0058;
+      }
+    </style>
+  </defs>
+  <title>lab-layout-illustrator</title>
+  <image width="1082" height="1408" xlink:href="Lab%20layout.png"/>
+  <g id="map-marker">
+    <g>
+      <path id="Shape" class="cls-1" d="M188.55,235.94c15.71,0,28.45,11.47,28.45,25.61,0,23.09-28.45,47.55-28.45,47.55s-28.45-24.26-28.45-47.55C160.1,247.41,172.84,235.94,188.55,235.94Z"/>
+      <circle id="Oval" class="cls-2" cx="188.55" cy="264.39" r="14.22"/>
+    </g>
+  </g>
+</svg>
