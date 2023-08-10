@@ -2,7 +2,7 @@
 A computer lab management system for Asia Pacific University. Currently being worked on as an assignment.
 
 # How to collaborate
-## First-timer
+## You have existing working directory
 Make sure you have Git installed locally on your computer.
 Being able to run `git --version` without error means it is installed.
 
@@ -19,7 +19,9 @@ git remote add origin https://github.com/teemop09/APLab.git
 ```
 
 To download the remote repository to your local repository:
-`git pull`
+```
+git pull origin main
+```
 
 You should see your working directory has more folders and files.
 
@@ -38,5 +40,9 @@ git commit -m <your message>
 ```
 > replace `<your message>` with the summary/description of what you've modified (what is the purpose)
 
+- To push to the remote repository:
+```
+git push origin main
+```
 
 You will see the changes made if you browse to the [remote repository link](https://github.com/teemop09/APLab) and refresh.
