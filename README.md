@@ -23,7 +23,9 @@ git clone https://github.com/teemop09/APLab.git
 
 A new folder named `APLab` will be created under the same directory. In this case, it is `C:\wamp64\www\APLab`.
 
-Follow the [next guide](https://github.com/teemop09/APLab#if-you-have-existing-working-directory) since you have an existing working directory now.
+Next time, you should follow the [other section](https://github.com/teemop09/APLab#if-you-have-existing-working-directory) since you have an existing working directory now.
+
+Now you can start [contributing](https://github.com/teemop09/APLab#contributing-to-the-repository)!
 
 ## If you have existing working directory
 
@@ -49,7 +51,14 @@ You should see your working directory has more folders and files.
 
 Edit and move your existing code files and make sure it works as intended after the changes.
 
-To push your codes to remote repository:
+Now you can start [contributing](https://github.com/teemop09/APLab#contributing-to-the-repository)!
+
+# Contributing to the repository
+
+Do the following if you haven't already:
+```
+git remote add origin https://github.com/teemop09/APLab.git
+```
 
 - Add the modified files:
 ```
@@ -63,6 +72,8 @@ git commit -m <your message>
 > replace `<your message>` with the summary/description of what you've modified (what is the purpose)
 
 - To push to the remote repository:
+
+
 ```
 git push origin main
 ```
