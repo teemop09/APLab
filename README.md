@@ -2,9 +2,31 @@
 A computer lab management system for Asia Pacific University. Currently being worked on as an assignment.
 
 # How to collaborate
-## If you have existing working directory
+
+## Pre-requisite
 Make sure you have Git installed locally on your computer.
-Being able to run `git --version` without error means it is installed.
+Being able to run the following command without error means it is properly installed.
+```
+git --version
+```
+
+## If you don't have existing working directory
+
+Launch terminal or command prompt. `cd` into the folder you want to place the code in. For example, if you want the code files to be in `C:\wamp64\www\APLab\`, then you enter the following.
+```
+cd C:\wamp64\www\
+```
+Then clone the repository as follows:
+```
+git clone https://github.com/teemop09/APLab.git
+```
+
+A new folder named `APLab` will be created under the same directory. In this case, it is `C:\wamp64\www\APLab`.
+
+Follow the [next guide](https://github.com/teemop09/APLab#if-you-have-existing-working-directory) since you have an existing working directory now.
+
+## If you have existing working directory
+
 
 Open terminal and `cd` to your working directory (where you have your code). For example, 
 ```
