@@ -2,7 +2,7 @@
 A computer lab management system for Asia Pacific University. Currently being worked on as an assignment.
 
 # How to collaborate
-## You have existing working directory
+## If you have existing working directory
 Make sure you have Git installed locally on your computer.
 Being able to run `git --version` without error means it is installed.
 
