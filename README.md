@@ -64,12 +64,8 @@ Now you can start [contributing](https://github.com/teemop09/APLab#contributing-
 ## Contributing to the repository
 
 Do the following if you haven't already:
-- `cd` to your working directory
-```
-cd C:\wamp64\www\APLab
-```
-- Add connection to remote repository
-```
+
+```cmd
 git remote add origin https://github.com/teemop09/APLab.git
 ```
 
@@ -77,6 +73,7 @@ git remote add origin https://github.com/teemop09/APLab.git
 
 ```cmd
 git add *
+
 ```
 
 - To commit the changes:
