@@ -2,6 +2,29 @@
 
 A computer lab management system for Asia Pacific University. Currently being worked on as an assignment.
 
+## Project structure
+
+```txt
+APLab
+└─src
+    ├─assets            // Static assets (images, fonts, etc.)
+    ├─css               // Global CSS styles
+    ├─js                // Global JavaScript scripts
+    ├─pages             // Page-specific folders
+    │   ├─user1         // User-specific pages
+    │   │   ├─dashboard
+    │   │   └─profile
+    │   ├─user2
+    │   └─...
+    ├─users             // User-related functionality
+    │   ├─authentication
+    │   ├─registration
+    │   └─...
+    ├─components        // Reusable UI components
+    ├─data              // Data management and APIs
+    └─utils             // Utility functions and helpers
+```
+
 ## How to collaborate
 
 ### Pre-requisite
