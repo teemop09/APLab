@@ -1,0 +1,3 @@
+# Purpose
+
+Global CSS styles

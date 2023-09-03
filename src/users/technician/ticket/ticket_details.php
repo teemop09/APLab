@@ -119,7 +119,7 @@ $conn->close();
         </p>
         <p>Troubleshooting Steps:</p>
         <form action="add_comment.php" method="post">
-            <div class="add-comment-box">
+            <div class="comment-box">
                 <textarea id="comment" name="comment" rows="4" cols="50" placeholder="Add your comment here..."></textarea>
                 <button id="submit-comment" type="submit">Add</button>
             </div>
