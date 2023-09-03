@@ -35,9 +35,26 @@
     <div class="sidebar" id="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeSide()">&times;</a>
         <a id="pcIdDisplay" href="#">hello</a>
-        <a href="#">Assignment</a>
+        <h2>Open Tickets</h2>
+
+        <?php
+        require_once($_SERVER['DOCUMENT_ROOT'] . '/src/data/conn.php');
+        $sql = "SELECT `tic_id`, `tic_description`, `tic_priority`, `tic_status`, `tic_open_date`, `tic_close_date` FROM `ticket_t` WHERE tic_status = 'open'";
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $ticket_element = "<a href='#' class='bg-slate-500' data-id='" . $row["tic_id"] . "'>" . $row["tic_description"] . "</a>";
+                echo $ticket_element;
+            }
+        } else {
+            echo "<a>No ticket entries</a>";
+        }
+        $conn->close();
+        ?>
+
+        <!-- <a href="#">Assignment</a>
         <a href="#">is</a>
-        <a href="#">da best</a>
+        <a href="#">da best</a> -->
     </div>
 </body>
 
