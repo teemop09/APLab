@@ -68,3 +68,18 @@
 .comment-content p {
     /* Additional styling for comment content */
 }
+
+/* Style for the comment when it is marked as solution */
+.comment.marked-solution {
+    border: 2px solid green;
+    /* Blue border for the solution comment */
+}
+
+/* Style for the solution icon */
+.solution-icon {
+    cursor: pointer;
+    color: #007bff;
+    /* Blue color for the icon, you can change it */
+    font-size: 24px;
+    /* Adjust the margin as needed */
+}
