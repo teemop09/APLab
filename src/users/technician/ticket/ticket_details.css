@@ -7,33 +7,8 @@
     /* Add some margin at the bottom for spacing */
 }
 
-.solution-header {
-    display: none;
-    align-items: center;
-    margin-bottom: 10px;
-    background-color: rgb(0, 212, 0);
-    border-bottom: 2px solid green;
-}
-
-.solution-header.marked-solution {
-    display: flex;
-}
-
-.solution-header>img {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    margin-left: 10px;
-}
-
-.solution-header>span {
-    font-weight: bold;
-    margin-right: 10px;
-    font-size: 20px;
-}
-
 /* Style for the textarea for new comments */
-#new-comment {
+#comment {
     width: 100%;
 
     /* padding: 10px; */
@@ -57,20 +32,6 @@
     display: flex;
 }
 
-.mark-solution-button {
-    background-color: #007bff;
-    /* Blue button color */
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 4px;
-    margin-top: 5px;
-    /* move button to right*/
-    margin-left: auto;
-    display: flex;
-}
-
 #submit-comment:hover {
     background-color: #0056b3;
     /* Darker blue on hover */
@@ -79,13 +40,9 @@
 /* Style for existing comments section*/
 .comment {
     border: 1px solid black;
+    padding: 10px;
     width: 35em;
     margin-left: 20px;
-}
-
-.comment-inner {
-    padding: 10px;
-
 }
 
 .comment-header {
@@ -93,14 +50,13 @@
     align-items: center;
 }
 
-.comment-header>img {
-    width: 30px;
-    height: 30px;
+.comment-header img {
+    width: 40px;
+    height: 40px;
     margin-right: 10px;
-    border-radius: 50%;
 }
 
-.comment-header>.username {
+.comment-header .username {
     vertical-align: top;
 }
 
@@ -111,10 +67,4 @@
 
 .comment-content p {
     /* Additional styling for comment content */
-}
-
-/* Style for the comment when it is marked as solution */
-.comment.marked-solution {
-    border: 2px solid green;
-    /* Blue border for the solution comment */
 }
