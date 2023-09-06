@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <a href="./src/users/technician/rounding/layout.php">lablayout</a>
+    <a href="./src/users/technician/rounding/layout.php?lab=TL04-05">lablayout</a>
     <br>
     <a href="./src/users/technician/ticket/ticket_details.php">ticketdetails</a>
     <br>
