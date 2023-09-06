@@ -20,7 +20,7 @@ if (
             JOIN
                 equipment_t e ON t.equ_id = e.equ_id
             WHERE
-                e.equ_status = 'deployed'
+                e.equ_status IN ('deployed', 'Available')
                 AND e.equ_name = ?
             ";
 

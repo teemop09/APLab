@@ -116,7 +116,7 @@ $(document).ready(function () {
 
         // Style the markers based on db
         var labName = document.getElementById("lab-heading").innerHTML;
-        const url = '/src/users/technician/rounding/get_tickets.php';
+        const url = '/src/users/technician/rounding/get_tickets.php?lab=' + labName;
         fetch(url)
             .then(response => {
                 if (!response.ok) {
@@ -138,7 +138,7 @@ $(document).ready(function () {
                             console.log(ticketStatus);
 
 
-                            if (ticketStatus == "open")
+                            if (ticketStatus == "open" || ticketStatus == "Pending")
                                 markers[i].classList.add("attention");
                             else if (ticketStatus == "taken")
                                 markers[i].classList.add("taken");

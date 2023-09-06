@@ -1,7 +1,7 @@
 <?php
 require_once($_SERVER['DOCUMENT_ROOT'] . '/src/data/conn.php');
 
-if ($_SERVER["REQUEST_METHOD"] == "GET") {
+if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["lab"]) && !empty($_GET["lab"])) {
     $sql = "SELECT
                 t.tic_status AS 'ticket status',
                 e.equ_id AS 'equipment id',
@@ -9,10 +9,22 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
             FROM
                 ticket_t t
             JOIN equipment_t e ON
-                t.equ_id = e.equ_id;
+                t.equ_id = e.equ_id
+            JOIN lab_t l ON
+                e.lab_id = l.lab_id
+            WHERE l.lab_name = ?;                   
             ";
-    $conn->query($sql);
-    $result = $conn->query($sql);
+
+    $stmt = $conn->prepare($sql);
+    if ($stmt) {
+        // Bind parameters
+        $lab = trim($_GET["lab"], " ");
+        $stmt->bind_param("s", $lab);
+        // Execute the prepared statement
+        $stmt->execute();
+        // Get the result
+        $result = $stmt->get_result();
+    }
     $data = array();
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
