@@ -1,0 +1,479 @@
+.bg {
+  width: 100%;
+  height: 1265px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: rgba(250, 251, 255, 1);
+}
+
+.submit-ticket-indicates-a-required-field {
+  top: 231px;
+  left: 722px;
+  color: rgba(255, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 27px;
+  font-style: Semi Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.required-text {
+  color: rgba(255, 0, 0, 1);
+}
+.submit-ticket-report-an-issue {
+  top: 228px;
+  left: 90px;
+  color: rgba(0, 5, 13, 1);
+  height: auto;
+  position: absolute;
+  font-size: 32px;
+  font-style: Semi Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: underline;
+}
+.submit-ticket-submitted-by {
+  top: 319px;
+  left: 90px;
+  color: rgba(0, 5, 13, 1);
+  height: auto;
+  position: absolute;
+  font-size: 27px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.submit-ticket-alternative-email {
+  top: 389px;
+  left: 90px;
+  color: rgba(0, 5, 13, 1);
+  height: auto;
+  position: absolute;
+  font-size: 27px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.submit-ticket-subject {
+  top: 459px;
+  left: 90px;
+  color: rgba(0, 5, 13, 1);
+  height: auto;
+  position: absolute;
+  font-size: 27px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.submit-ticket-describe-the-problem {
+  top: 529px;
+  left: 90px;
+  color: rgba(0, 5, 13, 1);
+  height: auto;
+  position: absolute;
+  font-size: 27px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.submit-ticket-computer-location {
+  top: 749px;
+  left: 90px;
+  color: rgba(0, 5, 13, 1);
+  height: auto;
+  position: absolute;
+  font-size: 27px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.submit-ticket-computer-id-name {
+  top: 820px;
+  left: 90px;
+  color: rgba(0, 5, 13, 1);
+  height: auto;
+  position: absolute;
+  font-size: 27px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.submit-ticket-user-id-input {
+  top: 310px;
+  left: 418px;
+  width: 669px;
+  height: 55px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: var(--dl-color-gray-black);
+  border-width: 1px;
+  border-radius: var(--dl-radius-radius-radius8);
+  background-color: var(--dl-color-gray-white);
+  border-right-width: 1px;
+}
+.submit-ticket-email-example {
+  top: 12px;
+  left: 13.43701171875px;
+  color: rgb(0, 0, 0);
+  width: 377px;
+  height: auto;
+  opacity: 0.40;
+  position: absolute;
+  font-size: 24px;
+  font-style: Medium;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.submit-ticket-alter-email-input {
+  top: 385px;
+  left: 418px;
+  width: 669px;
+  border: 2px dashed rgba(120, 120, 120, 0.4);
+  height: 55px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: #000000;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: var(--dl-radius-radius-radius8);
+  background-color: var(--dl-color-gray-white);
+  border-right-width: 1px;
+}
+.submit-ticket-subject-input {
+  top: 462px;
+  left: 418px;
+  width: 669px;
+  height: 55px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: #000000;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: var(--dl-radius-radius-radius8);
+  background-color: var(--dl-color-gray-white);
+  border-right-width: 1px;
+}
+.submit-ticket-subject-example {
+  top: 475px;
+  left: 438px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  opacity: 0.40;
+  position: absolute;
+  font-size: 24px;
+  font-style: Medium;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.submit-ticket-problem-input {
+  top: 537px;
+  left: 418px;
+  width: 668px;
+  height: 177px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: #000000;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: var(--dl-radius-radius-radius8);
+  background-color: var(--dl-color-gray-white);
+  border-right-width: 1px;
+}
+.submit-ticket-problem-example {
+  top: 551px;
+  left: 433px;
+  color: rgba(0, 0, 0, 1);
+  width: 650px;
+  height: auto;
+  opacity: 0.40;
+  position: absolute;
+  font-size: 24px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.submit-ticket-location-input {
+  top: 736px;
+  left: 418px;
+  width: 669px;
+  border: 2px dashed rgba(120, 120, 120, 0.4);
+  height: 55px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: #000000;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: var(--dl-radius-radius-radius8);
+  background-color: var(--dl-color-gray-white);
+  border-right-width: 1px;
+}
+.submit-ticket-location-example {
+  top: 751px;
+  left: 433px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  opacity: 0.70;
+  position: absolute;
+  font-size: 24px;
+  font-style: Medium;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.submit-ticket-symbol {
+  top: 749px;
+  left: 1048px;
+  color: rgba(0, 0, 0, 1);
+  width: 17px;
+  height: auto;
+  opacity: 0.80;
+  position: absolute;
+  font-size: 24px;
+  font-style: Semi Bold;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.submit-ticket-comp-name-input {
+  top: 813px;
+  left: 417px;
+  width: 669px;
+  height: 55px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: #000000;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: var(--dl-radius-radius-radius8);
+  background-color: EFF5FF;
+  border-right-width: 1px;
+  background-color: white;
+}
+.submit-ticket-name-example {
+  top: 826px;
+  left: 435px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  opacity: 0.70;
+  position: absolute;
+  font-size: 24px;
+  font-style: Medium;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+
+/* Overlay CSS */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.overlay-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px; /* Adjust as needed */
+}
+
+.overlay-header h3 {
+  margin: 0; /* Remove default margin for h3 */
+}
+
+
+.overlay-content {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+}
+
+#equipmentList {
+  list-style-type: none;
+  padding: 0;
+}
+
+#equipmentList li {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+#equipmentList li:hover {
+  text-decoration: underline;
+}
+
+
+.submit-ticket-submit-button {
+  top: 903px;
+  left: 419px;
+  width: 157.99241638183594px;
+  height: 54.999996185302734px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  cursor: pointer;
+  opacity: 0.9;
+}
+.submit-ticket-submit-box {
+  top: 0px;
+  left: 0px;
+  width: 158px;
+  height: 55px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 0px;
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 0.9;
+}
+.submit-ticket-submit-box:hover {
+  opacity: 1;
+}
+.submit-ticket-submit-text {
+  top: 13.00189208984375px;
+  left: 31.99810791015625px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  opacity: 0.70;
+  position: absolute;
+  font-size: 24px;
+  font-style: Semi Bold;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.submit-ticket-cancel-button {
+  top: 903px;
+  left: 596px;
+  width: 157.99241638183594px;
+  height: 54.999996185302734px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  cursor: pointer;
+  opacity: 0.9;
+}
+.submit-ticket-cancel-box {
+  top: 0px;
+  left: 0px;
+  width: 158px;
+  height: 55px;
+  position: absolute;
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 0px;
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 0.9;
+}
+.submit-ticket-cancel-box:hover {
+  opacity: 1;
+}
+.submit-ticket-cancel-text {
+  top: 13.00189208984375px;
+  left: 30px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  opacity: 0.70;
+  position: absolute;
+  font-size: 24px;
+  font-style: Semi Bold;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+  cursor: pointer;
+}
