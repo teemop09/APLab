@@ -1,61 +1,71 @@
 <!DOCTYPE html>
 <html>
+<?php
+if (
+    $_SERVER["REQUEST_METHOD"] == "GET" &&
+    isset($_GET["lab"]) &&
+    !empty($_GET["lab"])
+) {
+    $lab_name = $_GET["lab"];
+} else {
+    echo "404 page not found";
+    return;
+}
+?>
 
 <head>
     <title>Lab Layout</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <link rel="stylesheet" href="./layout.css" />
-    <script src="./layout.js"></script>
+    <script src="./importSvgHandler.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
 
 <body>
-    <div id="mySidebar" class="sidebar">
+    <div id="site-name">PENDING TICKET</div>
+    <div id="legend">
+        <div class="legend-item">
+            <div class="legend-color" style="background-color: #6ef0ff;"></div>
+            <div class="legend-text">Solved</div>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background-color: #ff0000;"></div>
+            <div class="legend-text">Error</div>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background-color: #ffff00;"></div>
+            <div class="legend-text">Taken</div>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background-color: #c0a7ff;"></div>
+            <div class="legend-text">Require Follow-up</div>
+        </div>
 
     </div>
-    <div id="content">
-        <figure id=lab-layout-figure>
-            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1082 1408">
-                <title>lab-layout-illustrator</title>
-                <image width="100%" height="100%" xlink:href="./assets/Lab%20layout.png" />
-                <g class="map-marker" data-id="2">
-                    <path id="Shape" class="cls-1"
-                        d="M188.55,235.94c15.71,0,28.45,11.47,28.45,25.61,0,23.09-28.45,47.55-28.45,47.55s-28.45-24.26-28.45-47.55C160.1,247.41,172.84,235.94,188.55,235.94Z" />
-                    <circle id="Oval" class="cls-2" cx="188.55" cy="264.39" r="14.22" />
-                </g>
-            </svg>
-        </figure>
+    <div id="layout-container">
+        <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-black md:text-5xl lg:text-6xl"
+            id="lab-heading">
+            <?= $lab_name ?>
+        </h1>
+        <object data="/src/components/layouts/<?= $lab_name ?>.php" type="image/svg+xml" id="lab-layout">
+        </object>
+
+        <div class="sidebar" id="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeSide()">&times;</a>
+            <a id="pcIdDisplay" href="#">hello</a>
+            <div id="ticket-container">
+                <h2 id="pending-ticket" style="display:none">Pending Tickets</h2>
+                <div id="pending-ticket-list">
+                </div>
+                <h2 id="past-ticket" style="display:none">Past Tickets</h2>
+                <div id="past-ticket-list">
+                </div>
+                <h2 id="no-info" style="display:none">No Ticket</h2>
+            </div>
+        </div>
     </div>
 
-
-    </div>
-
-    <div class="sidebar" id="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeSide()">&times;</a>
-        <a id="pcIdDisplay" href="#">hello</a>
-        <h2>Open Tickets</h2>
-
-        <?php
-        require_once($_SERVER['DOCUMENT_ROOT'] . '/src/data/conn.php');
-        $sql = "SELECT `tic_id`, `tic_description`, `tic_priority`, `tic_status`, `tic_open_date`, `tic_close_date` FROM `ticket_t` WHERE tic_status = 'open'";
-        $result = $conn->query($sql);
-        if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-                $ticket_element = "<a href='#' class='bg-slate-500' data-id='" . $row["tic_id"] . "'>" . $row["tic_description"] . "</a>";
-                echo $ticket_element;
-            }
-        } else {
-            echo "<a>No ticket entries</a>";
-        }
-        $conn->close();
-        ?>
-
-        <!-- <a href="#">Assignment</a>
-        <a href="#">is</a>
-        <a href="#">da best</a> -->
-    </div>
 </body>
 
 </html>

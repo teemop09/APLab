@@ -1,51 +1,130 @@
-/* Optional CSS styling for the lab layout container */
-.lab-layout-container {
-    position: relative;
-    display: inline-block;
+#site-name {
+    border-top: #111 2px solid;
+    border-bottom: #111 2px solid;
 }
 
-/* Style the mapped areas with a red border on hover */
-area:hover {
-    outline: 2px solid red;
+#lab-heading {
+    text-align: left;
+    margin-bottom: 20px;
+    margin-left: 2em;
 }
+
+#legend {
+    /* put the items horizontally */
+    display: flex;
+    flex-direction: row;
+    /* align the items in the center */
+    align-items: center;
+    /* align the items at the center of the main axis */
+    justify-content: space-evenly;
+    background-color: #d3d3d3;
+    padding: 10px;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 50%;
+}
+
+
+.legend-item {
+    /* put the items horizontally */
+    display: flex;
+    flex-direction: row;
+    /* align the items in the center */
+    align-items: center;
+    /* align the items at the center of the main axis */
+    justify-content: space-around;
+}
+
+.legend-color {
+    padding: 10px;
+    margin-right: 5px;
+    border-radius: 25%;
+}
+
+.legend-text {
+    /* bold it */
+    font-weight: bold;
+
+}
+
+/* Optional CSS styling for the lab layout container */
+#layout-container {
+    border: 0px;
+    padding: 0px;
+
+    width: 100%;
+    /* Set the width of the container */
+    overflow: hidden;
+    /* Hide any overflowing content */
+    /* You can also set a max-height if needed */
+}
+
+#lab-layout {
+    border: 0px;
+    padding: 0px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    width: 80%;
+    height: 1408px;
+}
+
 
 path:hover {
     stroke: aqua;
 }
 
-.cls-1 {
-    fill: #ff6e6e;
+
+.computer-marker.unchecked {
+    fill: #c0a7ff;
     fill-rule: evenodd;
-
-}
-
-.cls-2 {
-    fill: #0c0058;
-}
-
-.map-marker {
-    -webkit-transform: scale(1);
+    cursor: pointer;
+    /* -webkit-transform: scale(1); */
     -webkit-transform-origin: 50% 50%;
     -webkit-transition: .3s;
-    transform: scale(1);
+    /* transform: scale(1); */
     transform-origin: 50% 50%;
     transition: .3s;
     transform-box: fill-box;
 }
 
-.map-marker.active>path {
-    fill: #6200ff;
+.computer-marker.attention {
+    fill: #ff0000;
 }
 
-.map-marker.active {
-    -webkit-transform: scale(1.2);
+.computer-marker.taken {
+    fill: #ffff00;
+}
+
+.computer-marker.solved {
+    fill: #6ef0ff;
+}
+
+.computer-marker>.b {
+    fill: black;
+}
+
+.computer-marker.active {
+    cursor: pointer;
+    /* -webkit-transform: scale(1.2); */
     -webkit-transform-origin: 50% 50%;
     -webkit-transition: .3s;
-    transform: scale(1.2);
+    /* transform: scale(1.2); */
     transform-origin: 50% 50%;
     transition: .3s;
     transform-origin: bottom center;
 }
+
+.computer-marker.active>path {
+    fill: #6200ff !important;
+}
+
+.computer-marker.completed>path {
+    fill: #00ff00;
+}
+
 
 /* The sidebar menu */
 .sidebar {
