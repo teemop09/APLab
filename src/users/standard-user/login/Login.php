@@ -23,6 +23,7 @@ $result = $stmt->get_result();
 if ($result->num_rows > 0) {
     $userLogin = true;
 }
+session_start();
 
 if ($userLogin) {
     $row = $result->fetch_assoc();
@@ -57,5 +58,7 @@ if ($userLogin) {
         }
     }
 }
+
+$conn->close();
 
 ?>

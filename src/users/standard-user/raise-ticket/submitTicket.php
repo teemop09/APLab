@@ -1,3 +1,7 @@
+<?php
+include_once $_SERVER['DOCUMENT_ROOT'] . '/src/components/protected.php';
+?>
+
 <!DOCTYPE html>
 <html lang="english">
 

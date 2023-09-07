@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <?php
+include_once $_SERVER['DOCUMENT_ROOT'] . '/src/components/protected.php';
+
 if (
     $_SERVER["REQUEST_METHOD"] == "GET" &&
     isset($_GET["lab"]) &&
@@ -8,7 +10,7 @@ if (
 ) {
     $lab_name = $_GET["lab"];
 } else {
-    echo "404 page not found";
+    include $_SERVER["DOCUMENT_ROOT"] . "/src/users/technician/rounding/view_layout_home.php";
     return;
 }
 ?>

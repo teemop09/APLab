@@ -1,5 +1,6 @@
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/src/data/conn.php";
+include_once $_SERVER['DOCUMENT_ROOT'] . '/src/components/protected.php';
 
 $ticket_id = "";
 $row = null;
@@ -118,7 +119,7 @@ $conn->close();
         </p>
         <p>Troubleshooting Steps:</p>
 
-        <?php if ($query_output['status'] != 'solved'): ?>
+        <?php if (strtolower($query_output['status']) != 'solved'): ?>
             <button id="start-solving-button">Start solving this ticket</button>
             <form id="new-comment-form" action="add_comment.php" method="post">
                 <div class="comment-box">
