@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="Login.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="Login.js"></script>
+</head>
+
+<body onload="checkQueryString()">
+    <header></header>
+
+    <div class="content flex-column">
+        <h1 class="login-title">LOGIN</h1>
+
+        <form action="Login.php" method="post">
+            <div class="login-form flex-column medium">
+                <div class="form-input flex-column">
+                    <img class="form-icons" src="Logos/username_logo.png">
+                    <input id="login" name="login" type="text" placeholder="Email" autocomplete="off"
+                        onfocus="clearStyle(this.id, 'em-login')">
+                    <span class="error-msg" id="em-login"></span>
+                </div>
+                <div class="form-input flex-column">
+                    <img class="form-icons" src="Logos/password_logo.png">
+                    <input name="passwd" id="pw-input" type="password" placeholder="Password">
+                    <img id="pw-icon" src="Logos/pw_hidden.png" onclick="showHidePw()">
+                </div>
+                <div class="miscellaneous">
+                    <span>
+                        <input class="override-input-style" type="checkbox">
+                        <p>Remember me?</p>
+                    </span>
+                </div>
+                <button type="submit">LOGIN</button>
+
+
+            </div>
+        </form>
+
+
+    </div>
+
+    <footer></footer>
+</body>
+
+</html>
