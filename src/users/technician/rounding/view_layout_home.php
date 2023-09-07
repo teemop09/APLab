@@ -35,6 +35,10 @@ $conn->close();
 </head>
 
 <body>
+    <!-- load Header -->
+    <div id="headerContainer"></div>
+    <script src="/src/users/technician/headerFooter/TaTssHeader/loadTaTssHeader.js"></script>
+
     <!-- list all labs -->
     <div id="site-name">VIEW LAB LAYOUT</div>
 
@@ -65,6 +69,9 @@ $conn->close();
             </div>
         <?php endfor; ?>
     </div>
+    <!-- load Footer -->
+    <div id="footerContainer"></div>
+    <script src="/src/users/technician/headerFooter/TaFooter/loadTAfooter.js"></script>
 
 </body>
 

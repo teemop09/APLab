@@ -1,4 +1,4 @@
-* {
+.hf-component {
   margin: 0;
   padding: 0;
 }
@@ -9,8 +9,8 @@
 }
 
 .flex-col {
-  display:flex;
-  flex-flow:column;
+  display: flex;
+  flex-flow: column;
 }
 
 .hf-header {
@@ -52,7 +52,8 @@
   display: block;
 }
 
-.hf-sitemap a, .hf-sitemap p {
+.hf-sitemap a,
+.hf-sitemap p {
   text-align: center;
 }
 
