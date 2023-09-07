@@ -83,6 +83,9 @@ $conn->close();
 </head>
 
 <body>
+    <!-- load Header -->
+    <div id="headerContainer"></div>
+    <script src="/src/users/technician/headerFooter/TaTssHeader/loadTaTssHeader.js"></script>
 
     <?php if ($query_output): ?>
         <div id="site-name">TICKET
@@ -171,6 +174,10 @@ $conn->close();
 
 
     <?php endif; ?>
+    <!-- load Footer -->
+    <div id="footerContainer"></div>
+    <script src="/src/users/technician/headerFooter/TaFooter/loadTAfooter.js"></script>
+
 </body>
 
 </html>

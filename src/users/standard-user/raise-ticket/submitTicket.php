@@ -132,11 +132,11 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/src/components/protected.php';
     <div class="bg">
         <!-- load Header -->
         <div id="headerContainer"></div>
-        <script src="loadHeader.js"></script>
+        <script src="/src/users/standard-user/headerFooter/loadHeader.js"></script>
 
         <!-- load Footer -->
         <div id="footerContainer"></div>
-        <script src="loadFooter.js"></script>
+        <script src="/src/users/standard-user/headerFooter/loadFooter.js"></script>
 
 
         <!-- NEW CREATE FORM START HERE -->
@@ -214,13 +214,15 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/src/components/protected.php';
             <!-- Submit and Reset buttons -->
             <div class="submit-ticket-submit-button">
                 <button type="submit" class="submit-ticket-submit-box">
-                    <img alt="submitBox" src="assets/blueRect.png" class="submit-ticket-submit-img" />
+                    <img alt="submitBox" src="/src/assets/header-footer/blueRect.png"
+                        class="submit-ticket-submit-img" />
                     <span class="submit-ticket-submit-text">SUBMIT</span>
                 </button>
             </div>
             <div class="submit-ticket-cancel-button">
                 <button type="reset" class="submit-ticket-cancel-box">
-                    <img alt="ResetBox" src="assets/whiteRect.png" class="submit-ticket-cancel-img" />
+                    <img alt="ResetBox" src="/src/assets/header-footer/whiteRect.png"
+                        class="submit-ticket-cancel-img" />
                     <span class="submit-ticket-cancel-text">CANCEL</span>
                 </button>
             </div>

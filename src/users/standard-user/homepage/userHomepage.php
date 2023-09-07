@@ -130,18 +130,19 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/src/components/protected.php';
   <div class="bg">
     <!-- load Header -->
     <div id="headerContainer"></div>
-    <script src="loadHeader.js"></script>
+    <script src="/src/users/standard-user/headerFooter/loadHeader.js"></script>
 
     <!-- load Footer -->
     <div id="footerContainer"></div>
-    <script src="loadFooter.js"></script>
+    <script src="/src/users/standard-user/headerFooter/loadFooter.js"></script>
 
     <div class="user-homepage-homepage">
 
       <!-- SUBMIT TICKET -->
-      <a href="submitTicket.php" target="_top" class="user-homepage-submit-ticket-container button">
+      <a href="/src/users/standard-user/raise-ticket/submitTicket.php" target="_top"
+        class="user-homepage-submit-ticket-container button">
         <div class="user-homepage-submit-box">
-          <img alt="submitIcon" src="assets/submitTicket.png" class="user-homepage-submit-icon" />
+          <img alt="submitIcon" src="/src/assets/header-footer/submitTicket.png" class="user-homepage-submit-icon" />
           <span class="user-homepage-submit-text">Submit a New Ticket</span>
         </div>
       </a>
@@ -149,13 +150,14 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/src/components/protected.php';
       <!-- CHECK TICKET (checkTicket.html WILL LINK HERE) -->
       <div id="checkTicket" class="user-homepage-check-ticket-container button">
         <div class="user-homepage-check-box">
-          <img alt="checkIcon" src="assets/checkTicket.png" class="user-homepage-check-icon" />
+          <img alt="checkIcon" src="/src/assets/header-footer/checkTicket.png" class="user-homepage-check-icon" />
           <span class="user-homepage-check-text">Check Ticket Status</span>
         </div>
       </div>
     </div>
 
-    <img alt="ticketPortal" src="assets/ticketPortal.png" class="user-homepage-aplab-ticket-portal" />
+    <img alt="ticketPortal" src="/src/assets/header-footer/ticketPortal.png"
+      class="user-homepage-aplab-ticket-portal" />
   </div>
 </body>
 
