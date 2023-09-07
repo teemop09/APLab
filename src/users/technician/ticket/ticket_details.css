@@ -1,3 +1,13 @@
+#site-name {
+    /* bold, topdown border, gray*/
+    font-weight: bold;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 10px;
+    background-color: gray;
+    width: 100%;
+}
+
 /* Style for the add-comment section */
 .add-comment-box {
     padding: 10px;
@@ -7,8 +17,33 @@
     /* Add some margin at the bottom for spacing */
 }
 
+.solution-header {
+    display: none;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: rgb(0, 212, 0);
+    border-bottom: 2px solid green;
+}
+
+.solution-header.marked-solution {
+    display: flex;
+}
+
+.solution-header>img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.solution-header>span {
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
 /* Style for the textarea for new comments */
-#comment {
+#new-comment {
     width: 100%;
 
     /* padding: 10px; */
@@ -17,13 +52,30 @@
     resize: vertical;
 }
 
-/* Style for the submit button */
-#submit-comment {
+button {
     background-color: #007bff;
     /* Blue button color */
     color: white;
     border: none;
     padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 5px;
+}
+
+/* Style for the submit button */
+#submit-comment {
+    /* move button to right*/
+    margin-left: auto;
+    display: flex;
+}
+
+.mark-solution-button {
+    background-color: #007bff;
+    /* Blue button color */
+    color: white;
+    border: none;
+    padding: 10px;
     cursor: pointer;
     border-radius: 4px;
     margin-top: 5px;
@@ -40,9 +92,13 @@
 /* Style for existing comments section*/
 .comment {
     border: 1px solid black;
-    padding: 10px;
     width: 35em;
     margin-left: 20px;
+}
+
+.comment-inner {
+    padding: 10px;
+
 }
 
 .comment-header {
@@ -50,13 +106,14 @@
     align-items: center;
 }
 
-.comment-header img {
-    width: 40px;
-    height: 40px;
+.comment-header>img {
+    width: 30px;
+    height: 30px;
     margin-right: 10px;
+    border-radius: 50%;
 }
 
-.comment-header .username {
+.comment-header>.username {
     vertical-align: top;
 }
 
@@ -67,4 +124,10 @@
 
 .comment-content p {
     /* Additional styling for comment content */
+}
+
+/* Style for the comment when it is marked as solution */
+.comment.marked-solution {
+    border: 2px solid green;
+    /* Blue border for the solution comment */
 }

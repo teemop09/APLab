@@ -1,3 +1,8 @@
+<?php
+session_start();
+
+var_dump($_SESSION);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,9 +13,17 @@
 </head>
 
 <body>
-    <a href="./src/users/technician/rounding/layout.php">lablayout</a>
+    <a href="./src/users/technician/rounding/layout.php?lab=TL04-05">lablayout</a>
     <br>
     <a href="./src/users/technician/ticket/ticket_details.php">ticketdetails</a>
+    <br>
+    <a href="./src/users/standard-user/raise-ticket/userHomepage.php">userHomepage</a>
+    <br>
+    <a href="./src/users/standard-user/raise-ticket/submitTicket.php">submitTicket</a>
+    <br>
+    <a href="./src/users/standard-user/login/Login.html">login</a>
+    <br>
+    <a href="./src/users/technician/ticket/all_ticket_history.php">tickethistory</a>
 </body>
 
 </html>

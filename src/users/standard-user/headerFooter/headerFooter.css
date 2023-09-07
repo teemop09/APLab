@@ -1,0 +1,288 @@
+a {
+  color: initial;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: blue;
+}
+
+
+.headerfooter-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+
+.headerfooter-headerfooterbg {
+  top: -2px;
+  left: 0px;
+  width: 100%;
+  height: 1267px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+
+.headerfooter-header {
+  top: 0px;
+  left: 0px;
+  width: 1190px;
+  height: 169px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: #EFF5FF;
+
+}
+
+.headerfooter-logo,
+.headerfooter-home {
+  display: block;
+  /* Make the <a> elements behave like block-level elements */
+  box-sizing: border-box;
+  /* Include padding and borders in width and height */
+}
+
+.headerfooter-logo {
+  top: 20px;
+  left: 55px;
+  width: 266px;
+  height: 110px;
+  /* position: absolute; */
+}
+
+.headerfooter-home img {
+  left: 892px;
+  width: 50px;
+  height: 50px;
+  bottom: 14px;
+  position: absolute;
+}
+
+.headerfooter-notification img {
+  left: 964px;
+  width: 40px;
+  height: 40px;
+  bottom: 17px;
+  position: absolute;
+
+}
+
+.headerfooter-user img {
+  top: 103px;
+  left: 1021px;
+  width: 56px;
+  height: 56px;
+  position: absolute;
+}
+
+.headerfooter-footer {
+  left: -1px;
+  width: 1190px;
+  bottom: 0px;
+  height: 256px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: #EFF5FF;
+}
+
+.headerfooter-footer-logo {
+  top: 30px;
+  left: 35px;
+  width: 256px;
+  height: 100px;
+  position: absolute;
+
+}
+
+.headerfooter-sitemap {
+  top: 29px;
+  left: 409px;
+  color: rgba(0, 16, 49, 1);
+  height: auto;
+  position: absolute;
+  font-size: 19px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.headerfooter-home1 {
+  top: 64px;
+  left: 429px;
+  color: rgba(0, 16, 49, 1);
+  height: auto;
+  position: absolute;
+  font-size: 17px;
+  font-style: Medium;
+  text-align: left;
+  transition: 0.3s;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.headerfooter-notification1 {
+  top: 94px;
+  left: 399px;
+  color: rgba(0, 16, 49, 1);
+  height: auto;
+  position: absolute;
+  font-size: 17px;
+  font-style: Medium;
+  text-align: left;
+  transition: 0.3s;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.headerfooter-submit-new-ticket {
+  top: 126px;
+  left: 366px;
+  color: rgba(0, 16, 49, 1);
+  height: auto;
+  position: absolute;
+  font-size: 17px;
+  font-style: Medium;
+  text-align: left;
+  transition: 0.3s;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.headerfooter-check-ticket-status {
+  top: 158px;
+  left: 367px;
+  color: rgba(0, 16, 49, 1);
+  height: auto;
+  position: absolute;
+  font-size: 17px;
+  font-style: Medium;
+  text-align: left;
+  transition: 0.3s;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.headerfooter-our-location {
+  top: 32px;
+  left: 608px;
+  color: rgba(0, 16, 49, 1);
+  width: 203px;
+  height: auto;
+  position: absolute;
+  font-size: 19px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.headerfooter-address {
+  top: 65px;
+  left: 608px;
+  color: rgba(0, 16, 49, 1);
+  height: auto;
+  position: absolute;
+  font-size: 17px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.headerfooter-contact-us {
+  top: 30px;
+  left: 883px;
+  color: rgba(0, 16, 49, 1);
+  height: auto;
+  position: absolute;
+  font-size: 19px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.headerfooter-contact-number {
+  top: 65px;
+  color: rgba(0, 16, 49, 1);
+  right: 154px;
+  height: auto;
+  position: absolute;
+  font-size: 17px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.headerfooter-email-address {
+  top: 100px;
+  color: rgba(0, 16, 49, 1);
+  right: 44px;
+  width: 263px;
+  height: auto;
+  position: absolute;
+  font-size: 17px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.headerfooter-copyright {
+  left: 392px;
+  color: rgba(3, 14, 56, 0.698);
+  bottom: 12px;
+  height: auto;
+  opacity: 0.80;
+  position: absolute;
+  font-size: 16px;
+  font-style: Semi Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}

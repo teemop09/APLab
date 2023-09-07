@@ -1,51 +1,153 @@
-/* Optional CSS styling for the lab layout container */
-.lab-layout-container {
+.bg {
+    width: 100%;
+    overflow: hidden;
     position: relative;
-    display: inline-block;
+    align-items: flex-start;
+    flex-shrink: 0;
+    background-color: rgba(250, 251, 255, 1);
 }
 
-/* Style the mapped areas with a red border on hover */
-area:hover {
-    outline: 2px solid red;
+#site-name {
+    border-top: #111 2px solid;
+    border-bottom: #111 2px solid;
 }
+
+#lab-heading {
+    text-align: left;
+    margin-bottom: 20px;
+    margin-left: 2em;
+}
+
+#legend {
+    /* put the items horizontally */
+    display: flex;
+    flex-direction: row;
+    /* align the items in the center */
+    align-items: center;
+    /* align the items at the center of the main axis */
+    justify-content: space-evenly;
+    background-color: #d3d3d3;
+    padding: 10px;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 50%;
+}
+
+
+.legend-item {
+    /* put the items horizontally */
+    display: flex;
+    flex-direction: row;
+    /* align the items in the center */
+    align-items: center;
+    /* align the items at the center of the main axis */
+    justify-content: space-around;
+}
+
+.legend-color {
+    padding: 10px;
+    margin-right: 5px;
+    border-radius: 25%;
+}
+
+.legend-text {
+    /* bold it */
+    font-weight: bold;
+
+}
+
+/* Optional CSS styling for the lab layout container */
+#layout-container {
+    border: 0px;
+    padding: 0px;
+    --height: auto;
+    width: 100%;
+    /* Set the width of the container */
+    overflow: hidden;
+    /* Hide any overflowing content */
+    /* You can also set a max-height if needed */
+}
+
+#lab-layout {
+    border: 0px;
+    padding: 0px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    width: 80%;
+    height: 1408px;
+}
+
 
 path:hover {
     stroke: aqua;
 }
 
-.cls-1 {
-    fill: #ff6e6e;
+
+.computer-marker.unchecked {
+    fill: #c0a7ff;
     fill-rule: evenodd;
-
-}
-
-.cls-2 {
-    fill: #0c0058;
-}
-
-.map-marker {
-    -webkit-transform: scale(1);
+    cursor: pointer;
+    /* -webkit-transform: scale(1); */
     -webkit-transform-origin: 50% 50%;
     -webkit-transition: .3s;
-    transform: scale(1);
+    /* transform: scale(1); */
     transform-origin: 50% 50%;
     transition: .3s;
     transform-box: fill-box;
 }
 
-.map-marker.active>path {
-    fill: #6200ff;
+.computer-marker.attention {
+    fill: #ff0000;
 }
 
-.map-marker.active {
-    -webkit-transform: scale(1.2);
+.computer-marker.attention.active>path {
+    fill: #ff0062 !important;
+}
+
+.computer-marker.taken {
+    fill: #ffff00;
+}
+
+.computer-marker.taken.active>path {
+    fill: #ffc800 !important;
+}
+
+.computer-marker.solved {
+    fill: #6ef0ff;
+
+}
+
+.computer-marker.solved.active>path {
+    fill: #40b9ff !important;
+}
+
+
+.computer-marker>.b {
+    fill: black;
+}
+
+.computer-marker.active {
+    cursor: pointer;
+    /* -webkit-transform: scale(1.2); */
     -webkit-transform-origin: 50% 50%;
     -webkit-transition: .3s;
-    transform: scale(1.2);
+    /* transform: scale(1.2); */
     transform-origin: 50% 50%;
     transition: .3s;
     transform-origin: bottom center;
 }
+
+.computer-marker.active>path {
+    fill: #6200ff !important;
+}
+
+.computer-marker.completed>path {
+    fill: #00ff00;
+}
+
 
 /* The sidebar menu */
 .sidebar {
@@ -59,7 +161,8 @@ path:hover {
     /* Stay on top */
     top: 0;
     right: 0;
-    background-color: #111;
+    background-color: #f6fcff;
+    border-left: #000000 2px solid;
     /* Black*/
     overflow-x: hidden;
     /* Disable horizontal scroll */
@@ -71,17 +174,23 @@ path:hover {
 
 /* The sidebar links */
 .sidebar a {
-    padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
-    color: #f1f1f1;
-    display: block;
+    font-size: 15px;
+    color: #000000;
     transition: 0.3s;
+    /* margin-top: 5px;
+    margin-bottom: 5px; */
+}
+
+
+.ticket-list a:first-child {
+    border-top: #000000 1px solid;
+
 }
 
 /* When you mouse over the navigation links, change their color */
-.sidebar a:hover {
-    color: #f1f1f1;
+.ticket-list a:hover {
+    background-color: #d9e9ff;
 }
 
 /* Position and style the close button (top right corner) */
@@ -91,11 +200,39 @@ path:hover {
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
+    background-color: transparent;
+    border: none;
 }
 
 .sidebar h2 {
-    color: #fff;
+    color: #000000;
     text-align: center;
     margin-bottom: 20px;
     font-size: 25px;
+    border-bottom: #000000 2px solid;
+    border-top: #000000 2px solid;
+    font-weight: bolder;
+    padding: 10px;
+}
+
+.sidebar h3 {
+    color: #000000;
+    text-align: left;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.ticket-item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 8px 8px 8px 10px;
+    background-color: #e3f5ff;
+    border-bottom: #000000 1px solid;
+
 }

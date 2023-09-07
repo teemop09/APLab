@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 786.91 1024">
+  <defs>
+    <style>
+      .a {
+        fill: #ff6e6e;
+        fill-rule: evenodd;
+      }
+
+      .b {
+        fill: #0c0058;
+      }
+    </style>
+  </defs>
+  <title>Untitled-1</title>
+  <image width="1082" height="1408" transform="scale(0.73)" xlink:href="../../../../../../../../Users/ja/Downloads/TL04-05.png"/>
+  <g>
+    <path class="a" d="M713.24,57c9.88,0,17.89,7.21,17.89,16.1,0,14.52-17.89,29.9-17.89,29.9s-17.89-15.25-17.89-29.9C695.35,64.21,703.36,57,713.24,57Z" transform="translate(-253)"/>
+    <circle class="b" cx="460.24" cy="74.89" r="8.94"/>
+  </g>
+</svg>

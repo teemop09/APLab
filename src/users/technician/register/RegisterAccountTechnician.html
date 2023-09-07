@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="RegisterAccount.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="RegisterAccount.js"></script>
+    <script>
+    </script>
+</head>
+
+<body onload="checkQueryString()">
+    <!-- load Header -->
+    <div id="headerContainer"></div>
+    <script src="/src/users/technician/headerFooter/TaTssHeader/loadTaTssHeader.js"></script>
+
+    <div class="content flex-column">
+        <h1 class="sign-up-title">REGISTER</h1>
+
+        <form id="sign-up-form" action="RegisterAccount.php" method="post">
+            <div class="sign-up-form flex-column medium">
+                <div class="form-input flex-column">
+                    <img class="form-icons" src="/src/assets/Logos/role_logo.png">
+                    <select id="role" type="text" name="role" placeholder="Role"
+                        onfocus="clearStyle(this.id, 'em-role')" onblur="roleCheck()" autocomplete="off">
+                        <option value="" disabled selected>Role</option>
+                        <option value="Technical Assistant">Technical Assistant</option>
+                        <option value="Technical Service Staff">Technical Service Staff</option>
+                    </select>
+                    <span class="error-msg" id="em-role"></span>
+                </div>
+                <div class="form-input flex-column">
+                    <img class="form-icons" src="/src/assets/Logos/id_logo.png">
+                    <input id="ts" type="text" name="ts" placeholder="TS Number" onfocus="clearStyle(this.id, 'em-ts')"
+                        onblur="tsCheck(this.value)" autocomplete="off">
+                    <span class="error-msg" id="em-ts"></span>
+                </div>
+                <div class="form-input flex-column">
+                    <img class="form-icons" src="/src/assets/Logos/username_logo.png">
+                    <input id="fname" type="text" name="fname" placeholder="First Name"
+                        onfocus="clearStyle(this.id, 'em-fname')" onblur="fnameCheck(this.value)" autocomplete="off">
+                    <span class="error-msg" id="em-fname"></span>
+                </div>
+                <div class="form-input flex-column">
+                    <img class="form-icons" src="/src/assets/Logos/username_logo.png">
+                    <input id="lname" type="text" name="lname" placeholder="Last Name"
+                        onfocus="clearStyle(this.id, 'em-lname')" onblur="lnameCheck(this.value)" autocomplete="off">
+                    <span class="error-msg" id="em-lname"></span>
+                </div>
+                <div class="form-input flex-column">
+                    <img class="form-icons" src="/src/assets/Logos/email_logo.png">
+                    <input id="email" type="text" name="email" placeholder="Email"
+                        onfocus="clearStyle(this.id, 'em-email')" onblur="emailCheck(this.value)" autocomplete="off">
+                    <span class="error-msg" id="em-email"></span>
+                </div>
+                <div class="form-input flex-column">
+                    <img class="form-icons" src="/src/assets/Logos/password_logo.png">
+                    <input id="passwd" type="password" name="passwd" placeholder="Password"
+                        onfocus="clearStyle(this.id, 'em-passwd')" onblur="pwCheck(this.value)">
+                    <img id="pw-icon" src="/src/assets/Logos/pw_hidden.png" onclick="showHidePw()">
+                    <span class="error-msg" id="em-passwd"></span>
+                </div>
+                <div class="form-input flex-column">
+                    <img class="form-icons" src="/src/assets/Logos/password_logo.png">
+                    <input id="cpasswd" type="password" name="cpasswd" placeholder="Confirm Password"
+                        onfocus="clearStyle(this.id, 'em-cpasswd')" onblur="pwMatchCheck(this.value)">
+                    <img id="pw-icon-cpd" src="/src/assets/Logos/pw_hidden.png" onclick="showHideCPw()">
+                    <span class="error-msg" id="em-cpasswd"></span>
+                </div>
+                <div class="form-input flex-column">
+                    <img class="form-icons" src="/src/assets/Logos/contact_logo.png">
+                    <input id="contact" type="text" name="contact" placeholder="Contact Number"
+                        onfocus="clearStyle(this.id, 'em-contact')" onblur="contactCheck(this.value)">
+                    <span class="error-msg" id="em-contact"></span>
+                </div>
+                <div class="form-input flex-column">
+                    <img class="form-icons" src="/src/assets/Logos/department_logo.png">
+                    <select id="department" type="text" name="department" placeholder="Department"
+                        onfocus="clearStyle(this.id, 'em-department')" onblur="departmentCheck()" autocomplete="off">
+                        <option value="" disabled selected>Department</option>
+                        <option value="Software">Software</option>
+                        <option value="Hardware">Hardware</option>
+                    </select>
+                    <span class="error-msg" id="em-department"></span>
+                </div>
+                <button type="button" onclick="validateForm2()">REGISTER</button>
+
+            </div>
+        </form>
+
+    </div>
+
+    <!-- load Footer -->
+    <div id="footerContainer"></div>
+    <script src="/src/users/technician/headerFooter/TaFooter/loadTAfooter.js"></script>
+</body>
+
+</html>

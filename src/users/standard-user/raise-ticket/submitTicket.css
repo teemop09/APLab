@@ -24,9 +24,11 @@
   font-stretch: normal;
   text-decoration: none;
 }
+
 .required-text {
   color: rgba(255, 0, 0, 1);
 }
+
 .submit-ticket-report-an-issue {
   top: 228px;
   left: 90px;
@@ -42,6 +44,7 @@
   font-stretch: normal;
   text-decoration: underline;
 }
+
 .submit-ticket-submitted-by {
   top: 319px;
   left: 90px;
@@ -73,6 +76,7 @@
   font-stretch: normal;
   text-decoration: none;
 }
+
 .submit-ticket-subject {
   top: 459px;
   left: 90px;
@@ -152,6 +156,7 @@
   background-color: var(--dl-color-gray-white);
   border-right-width: 1px;
 }
+
 .submit-ticket-email-example {
   top: 12px;
   left: 13.43701171875px;
@@ -169,6 +174,7 @@
   font-stretch: normal;
   text-decoration: none;
 }
+
 .submit-ticket-alter-email-input {
   top: 385px;
   left: 418px;
@@ -186,6 +192,7 @@
   background-color: var(--dl-color-gray-white);
   border-right-width: 1px;
 }
+
 .submit-ticket-subject-input {
   top: 462px;
   left: 418px;
@@ -202,6 +209,7 @@
   background-color: var(--dl-color-gray-white);
   border-right-width: 1px;
 }
+
 .submit-ticket-subject-example {
   top: 475px;
   left: 438px;
@@ -218,6 +226,7 @@
   font-stretch: normal;
   text-decoration: none;
 }
+
 .submit-ticket-problem-input {
   top: 537px;
   left: 418px;
@@ -234,6 +243,7 @@
   background-color: var(--dl-color-gray-white);
   border-right-width: 1px;
 }
+
 .submit-ticket-problem-example {
   top: 551px;
   left: 433px;
@@ -251,6 +261,7 @@
   font-stretch: normal;
   text-decoration: none;
 }
+
 .submit-ticket-location-input {
   top: 736px;
   left: 418px;
@@ -268,6 +279,7 @@
   background-color: var(--dl-color-gray-white);
   border-right-width: 1px;
 }
+
 .submit-ticket-location-example {
   top: 751px;
   left: 433px;
@@ -284,6 +296,7 @@
   font-stretch: normal;
   text-decoration: none;
 }
+
 .submit-ticket-symbol {
   top: 749px;
   left: 1048px;
@@ -301,6 +314,7 @@
   font-stretch: normal;
   text-decoration: none;
 }
+
 .submit-ticket-comp-name-input {
   top: 813px;
   left: 417px;
@@ -318,6 +332,7 @@
   border-right-width: 1px;
   background-color: white;
 }
+
 .submit-ticket-name-example {
   top: 826px;
   left: 435px;
@@ -337,6 +352,7 @@
 
 
 /* Overlay CSS */
+
 .overlay {
   display: none;
   position: fixed;
@@ -351,12 +367,16 @@
 .overlay-header {
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   align-items: center;
-  margin-bottom: 10px; /* Adjust as needed */
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-right: 15px;
 }
 
 .overlay-header h3 {
-  margin: 0; /* Remove default margin for h3 */
+  margin: 0;
+  /* Remove default margin for h3 */
 }
 
 
@@ -370,7 +390,40 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 320px;
+  /* width: 320px; */
+  height: 500px;
+}
+
+.overlay-bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-right: 15px;
+}
+
+#overlay-confirm {
+  background-color: #007bff;
+  /* Blue button color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+#overlay-cancel {
+  background-color: #007bff;
+  /* Blue button color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 5px;
 }
 
 #equipmentList {
@@ -399,6 +452,7 @@
   cursor: pointer;
   opacity: 0.9;
 }
+
 .submit-ticket-submit-box {
   top: 0px;
   left: 0px;
@@ -412,9 +466,11 @@
   cursor: pointer;
   opacity: 0.9;
 }
+
 .submit-ticket-submit-box:hover {
   opacity: 1;
 }
+
 .submit-ticket-submit-text {
   top: 13.00189208984375px;
   left: 31.99810791015625px;
@@ -444,6 +500,7 @@
   cursor: pointer;
   opacity: 0.9;
 }
+
 .submit-ticket-cancel-box {
   top: 0px;
   left: 0px;
@@ -457,9 +514,11 @@
   cursor: pointer;
   opacity: 0.9;
 }
+
 .submit-ticket-cancel-box:hover {
   opacity: 1;
 }
+
 .submit-ticket-cancel-text {
   top: 13.00189208984375px;
   left: 30px;

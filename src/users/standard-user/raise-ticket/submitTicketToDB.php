@@ -2,7 +2,8 @@
 require_once $_SERVER['DOCUMENT_ROOT'] . '/src/data/conn.php';
 
 // Generate custom ticket ID
-function generateCustomID($conn) {
+function generateCustomID($conn)
+{
     mysqli_begin_transaction($conn);
 
     try {
@@ -45,8 +46,36 @@ try {
     // Generate the custom ticket ID (get the function from top)
     $customID = generateCustomID($conn);
 
-    $sql = "INSERT INTO ticket_t (tic_id, tic_alt_email, tic_subject, tic_description, tic_open_date, lab_id, equ_id, user_id) 
-            VALUES (?, ?, ?, ?, NOW(), ?, ?, ?)";
+    $get_equ_id = "SELECT
+                        e.equ_id AS 'equipment id'
+                    FROM
+                        equipment_t e
+                    WHERE
+                        e.equ_name = ?
+                ";
+    $stmt = $conn->prepare($get_equ_id);
+    var_dump($_POST['computer_id']);
+    $stmt->bind_param("s", $_POST['computer_id']);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    var_dump($result);
+    $row = $result->fetch_assoc();
+    var_dump($row);
+    $equ_id = $row['equipment id'];
+
+
+
+    $sql = "INSERT INTO ticket_t(
+            tic_id,
+            tic_alt_email,
+            tic_subject,
+            tic_description,
+            tic_open_date,
+            lab_id,
+            equ_id,
+            user_id
+        )
+        VALUES(?,?,?,?,NOW(),?,?,?)";
 
     $stmt = mysqli_prepare($conn, $sql);
 
@@ -54,7 +83,7 @@ try {
         throw new Exception('Error preparing SQL statement: ' . mysqli_error($conn));
     }
 
-    mysqli_stmt_bind_param($stmt, "sssssss", $customID, $_POST['alt_email_address'], $_POST['subject'], $_POST['problem_description'], $_POST['techlab_id'], $_POST['computer_id'], $_POST['user_id']);
+    $stmt->bind_param("sssssss", $customID, $_POST['alt_email_address'], $_POST['subject'], $_POST['problem_description'], $_POST['techlab_id'], $equ_id, $_POST['user_id']);
 
     // Execute query
     if (mysqli_stmt_execute($stmt)) {
