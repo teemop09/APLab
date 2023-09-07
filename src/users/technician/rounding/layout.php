@@ -28,7 +28,7 @@ if (
     <div class="bg">
         <!-- load Header -->
         <div id="headerContainer"></div>
-        <script src="/src/users/standard-user/raise-ticket/loadHeader.js"></script>
+        <script src="/src/users/technician/headerFooter/TaTssHeader/loadTaTssHeader.js"></script>
 
 
         <div id="site-name">PENDING TICKET</div>
@@ -74,9 +74,8 @@ if (
             </div>
         </div>
         <!-- load Footer -->
-
         <div id="footerContainer"></div>
-        <script src="/src/users/standard-user/raise-ticket/loadFooter.js"></script>
+        <script src="/src/users/technician/headerFooter/TaFooter/loadTAfooter.js"></script>
     </div>
 </body>
 
