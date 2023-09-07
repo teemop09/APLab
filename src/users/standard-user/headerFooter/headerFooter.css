@@ -28,6 +28,7 @@ a:hover {
   align-items: flex-start;
   flex-shrink: 0;
 }
+
 .headerfooter-header {
   top: 0px;
   left: 0px;
@@ -38,13 +39,15 @@ a:hover {
   align-items: flex-start;
   flex-shrink: 0;
   background-color: #EFF5FF;
-  
+
 }
 
 .headerfooter-logo,
 .headerfooter-home {
-  display: block; /* Make the <a> elements behave like block-level elements */
-  box-sizing: border-box; /* Include padding and borders in width and height */
+  display: block;
+  /* Make the <a> elements behave like block-level elements */
+  box-sizing: border-box;
+  /* Include padding and borders in width and height */
 }
 
 .headerfooter-logo {
@@ -52,12 +55,12 @@ a:hover {
   left: 55px;
   width: 266px;
   height: 110px;
-  position: absolute;
+  /* position: absolute; */
 }
 
 .headerfooter-home img {
   left: 892px;
-  width: 50px; 
+  width: 50px;
   height: 50px;
   bottom: 14px;
   position: absolute;
@@ -91,6 +94,7 @@ a:hover {
   flex-shrink: 0;
   background-color: #EFF5FF;
 }
+
 .headerfooter-footer-logo {
   top: 30px;
   left: 35px;
@@ -99,6 +103,7 @@ a:hover {
   position: absolute;
 
 }
+
 .headerfooter-sitemap {
   top: 29px;
   left: 409px;
@@ -114,6 +119,7 @@ a:hover {
   font-stretch: normal;
   text-decoration: none;
 }
+
 .headerfooter-home1 {
   top: 64px;
   left: 429px;
@@ -198,6 +204,7 @@ a:hover {
   font-stretch: normal;
   text-decoration: none;
 }
+
 .headerfooter-address {
   top: 65px;
   left: 608px;
@@ -213,6 +220,7 @@ a:hover {
   font-stretch: normal;
   text-decoration: none;
 }
+
 .headerfooter-contact-us {
   top: 30px;
   left: 883px;
@@ -228,6 +236,7 @@ a:hover {
   font-stretch: normal;
   text-decoration: none;
 }
+
 .headerfooter-contact-number {
   top: 65px;
   color: rgba(0, 16, 49, 1);
@@ -243,6 +252,7 @@ a:hover {
   font-stretch: normal;
   text-decoration: none;
 }
+
 .headerfooter-email-address {
   top: 100px;
   color: rgba(0, 16, 49, 1);

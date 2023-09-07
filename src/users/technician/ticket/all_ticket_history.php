@@ -19,39 +19,38 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/src/components/protected.php';
 
     <?php
     $sql = "SELECT
-            t.tic_id AS 'ticket id',
-            e.equ_name AS 'pc location',
-            t.tic_subject AS 'subject',
-            t.tic_open_date AS 'issued on',
-            t.tic_status AS 'status',
-            CONCAT(
-                tech.tech_first_name,
-                ' ',
-                tech.tech_last_name
-            ) AS 'pic'
-        FROM
-            ticket_t AS t
-        JOIN comment_t AS c
-        ON
-            t.tic_id = c.tic_id
-        JOIN technician_t AS tech
-        ON
-            c.tech_id = tech.tech_id
-        JOIN equipment_t AS e
-        ON
-            e.equ_id = t.equ_id
-        WHERE
-            c.com_timestamp = (
-            SELECT
-                MAX(com_timestamp)
+                t.tic_id AS 'ticket id',
+                e.equ_name AS 'pc location',
+                t.tic_subject AS 'subject',
+                t.tic_open_date AS 'issued on',
+                t.tic_status AS 'status',
+                CONCAT(
+                    tech.tech_first_name,
+                    ' ',
+                    tech.tech_last_name
+                ) AS 'pic'
             FROM
-                comment_t
+                ticket_t AS t
+            LEFT JOIN comment_t AS c
+            ON
+                t.tic_id = c.tic_id
+            LEFT JOIN technician_t AS tech
+            ON
+                c.tech_id = tech.tech_id
+            JOIN equipment_t AS e
+            ON
+                e.equ_id = t.equ_id
             WHERE
-                tic_id = t.tic_id
-        )
-        ORDER BY
-            t.tic_open_date
-        DESC;";
+                c.com_timestamp =(
+                SELECT
+                    MAX(com_timestamp)
+                FROM
+                    comment_t
+                WHERE
+                    tic_id = t.tic_id
+            ) OR c.com_timestamp IS NULL
+            ORDER BY
+                t.tic_open_date DESC;";
 
     $stmt = $conn->prepare($sql);
     $stmt->execute();
@@ -83,7 +82,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/src/components/protected.php';
             echo "<td>" . $row['subject'] . "</td>";
             echo "<td>" . $row['issued on'] . "</td>";
             echo "<td>" . $row['status'] . "</td>";
-            echo "<td>" . $row['pic'] . "</td>";
+            echo "<td>" . ($row['pic'] == null ? "N/A" : $row['pic']) . "</td>";
             // Details column with a link to the ticket details page
             echo "<td><a class='details-link' href='ticket_details.php?ticket_id=" . $row['ticket id'] . "'>></a></td>";
             echo "</tr>";
