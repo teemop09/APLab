@@ -140,7 +140,7 @@ $(document).ready(function () {
 
                             if (ticketStatus == "open" || ticketStatus == "Pending")
                                 markers[i].classList.add("attention");
-                            else if (ticketStatus == "taken")
+                            else if (ticketStatus == "Pending (Taken)")
                                 markers[i].classList.add("taken");
                             else if (ticketStatus == "solved")
                                 markers[i].classList.add("solved");
@@ -219,7 +219,7 @@ function createTicketLinks(tickets, ticketLinksContainer) {
     // Create anchor links for "past" tickets
     const ticketLinks = tickets.map(ticket => {
         const anchor = document.createElement("a");
-        anchor.href = `/ticket-detail.php?id=${ticket.id}`; // Replace with your actual URL
+        anchor.href = `/ticket-detail.php?id=${ticket.id}`;
         anchor.textContent = ticket.subject;
         anchor.classList.add("ticket-link");
         return anchor;

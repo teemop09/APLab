@@ -1,0 +1,68 @@
+body {
+    overflow-x: hidden;
+}
+
+#site-name {
+    /* bold, topdown border, gray*/
+    font-weight: bold;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 10px;
+    background-color: gray;
+    width: 100%;
+}
+
+.table {
+    width: 100%;
+}
+
+/* Apply styles to table rows */
+.table tbody tr {
+    text-align: center;
+    background-color: lightblue;
+    border-bottom: 2px solid white;
+    /* Add a white border at the bottom of each row */
+
+}
+
+td:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+td:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+
+/* Style the ">" symbol */
+.details-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.details-link:hover {
+    text-decoration: underline;
+}
+
+/* Center column headers */
+.table thead th {
+    text-align: center;
+    background-color: transparent;
+    border: none;
+}
+
+/* Remove spacing between table cells */
+.table {
+    border-collapse: collapse;
+}
+
+/* Remove borders from table cells */
+.table th,
+.table td {
+    border: none;
+    padding: 10px;
+    /* Add padding to table cells for spacing */
+}

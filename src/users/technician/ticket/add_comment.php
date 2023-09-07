@@ -8,7 +8,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $redirect_url = "ticket_details.php?ticket_id=$tic_id";
     if (!empty($content)) {
 
-        // Example SQL query (replace with your actual query):
         $query = "INSERT INTO comment_t(
                     com_id,
                     com_content,
@@ -28,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $tech_id = 'TS0001'; // TODO: get technican ID from POST or session
         $stmt->bind_param('ssss', $content, $timestamp, $tic_id, $tech_id);
         $result = $stmt->execute();
-
+        include $_SERVER["DOCUMENT_ROOT"] . "/src/users/technician/ticket/ticket_to_pending.php";
         var_dump($stmt);
         var_dump($result);
     }
