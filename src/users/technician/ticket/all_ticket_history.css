@@ -41,6 +41,8 @@ td:last-child {
 .details-link {
     text-decoration: none;
     color: inherit;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .details-link:hover {
