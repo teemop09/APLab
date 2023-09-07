@@ -10,6 +10,7 @@ if (
     isset($_GET["ticket_id"]) &&
     !empty($_GET["ticket_id"])
 ) {
+    var_dump($_GET);
     $ticket_id = $_GET["ticket_id"];
 
     // Sanitize the input to prevent SQL injection
@@ -44,6 +45,7 @@ if (
             WHERE
                 t.tic_id = '$ticket_id';";
 
+    var_dump($sql);
 
     $result = $conn->query($sql);
 
@@ -63,8 +65,11 @@ if (
         $comment["username"] = $row["username"];
         $comments[] = $comment;
         // At this point $comments is an array of arrays
+        var_dump($row);
+        var_dump($result);
     }
     $query_output['comments'] = $comments;
+    var_dump($row);
 
 }
 
@@ -77,7 +82,6 @@ $conn->close();
 <head>
     <title>View Ticket</title>
     <link rel="stylesheet" href="ticket_details.css">
-    <script src="ticket_details.js"></script>
 </head>
 
 <body>
@@ -117,12 +121,10 @@ $conn->close();
         <form action="add_comment.php" method="post">
             <div class="comment-box">
                 <textarea id="comment" name="comment" rows="4" cols="50" placeholder="Add your comment here..."></textarea>
-                <input type="hidden" name="ticket_id" value="<?php echo $ticket_id; ?>">
                 <button id="submit-comment" type="submit">Add</button>
             </div>
         </form>
 
-        <!-- TODO: database add a column called "isSolution" to the comments table -->
         <?php foreach ($query_output['comments'] as $comment): ?>
             <div class="comment">
                 <div class="comment-header">
@@ -139,10 +141,6 @@ $conn->close();
                         <?= $comment['content'] ?>
                     </p>
                 </div>
-                <div class="mark-solution">
-                    <span class="solution-icon">...</span>
-                </div>
-
             </div>
             <br>
         <?php endforeach; ?>
