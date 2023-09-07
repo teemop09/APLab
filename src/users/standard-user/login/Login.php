@@ -28,7 +28,7 @@ session_start();
 if ($userLogin) {
     $row = $result->fetch_assoc();
     $_SESSION['userID'] = $row["user_id"];
-    header('Location: UserHomePage.php');
+    header('Location: /src/users/standard-user/raise-ticket/userHomepage.php');
 } else {
     $query = "SELECT * FROM technician_t WHERE tech_email ='$login' AND tech_password ='$passwd' AND tech_role = 'Technical Assistant'";
     $result = mysqli_query($conn, $query);
