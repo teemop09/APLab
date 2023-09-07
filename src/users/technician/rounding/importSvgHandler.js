@@ -1,4 +1,7 @@
 var activeMarker = null;
+var labName = null;
+var externalSvg = null;
+var pcId = null;
 
 // Function to handle click events on the imported SVG
 function handleSvgClick(event) {
@@ -14,12 +17,11 @@ function handleSvgClick(event) {
             restore(activeMarker);
         }
 
-        var pcId = null;
+        pcId = null;
         // if is active then openSide, if not then closeSide
         if (event.target.parentNode.classList.contains("active")) {
             pcId = event.target.parentNode.getAttributeNS(null, "data-id");
-            openSide(pcId);
-            console.log(pcId);
+            openSide(labName, pcId);
         }
         else {
             closeSide();
@@ -27,7 +29,6 @@ function handleSvgClick(event) {
         activeMarker = event.target.parentNode;
         /* Get tickets associated with the computer */
         // Define the URL of the PHP script
-        var labName = document.getElementById("lab-heading").innerHTML;
         const url = '/src/users/technician/rounding/get_ticket_by_pc_id.php?id=' + pad(pcId, 2) + '&lab=' + labName;
 
         // Function to create ticket links
@@ -36,10 +37,17 @@ function handleSvgClick(event) {
 
             // Create and append anchor links for each ticket
             tickets.forEach(ticket => {
-                const anchor = document.createElement("a");
-                anchor.href = "/src/users/technician/ticket/ticket_details.php?ticket_id=" + ticket.id;
-                anchor.textContent = ticket.subject;
-                ticketList.appendChild(anchor);
+                const ticketItemContainer = document.createElement("a");
+                ticketItemContainer.classList.add("ticket-item");
+
+                const ticketLabel = document.createElement("div");
+                ticketItemContainer.href = "/src/users/technician/ticket/ticket_details.php?ticket_id=" + ticket.id;
+                ticketLabel.textContent = ticket.subject;
+                const symbol = document.createElement("div");
+                symbol.textContent = ">";
+                ticketItemContainer.appendChild(ticketLabel);
+                ticketItemContainer.appendChild(symbol);
+                ticketList.appendChild(ticketItemContainer);
             });
 
             container.innerHTML = ""; // Clear the container
@@ -96,7 +104,6 @@ function handleSvgClick(event) {
     }
 }
 
-var externalSvg = null;
 $(document).ready(function () {
     // Get the <object> element
     externalSvg = document.getElementById("lab-layout");
@@ -115,7 +122,7 @@ $(document).ready(function () {
         svgDoc.addEventListener("click", handleSvgClick);
 
         // Style the markers based on db
-        var labName = document.getElementById("lab-heading").innerHTML;
+        labName = (document.getElementById("lab-heading").innerHTML).trim();
         const url = '/src/users/technician/rounding/get_tickets.php?lab=' + labName;
         fetch(url)
             .then(response => {
@@ -192,9 +199,9 @@ function toggleScale(element, scaleSize) {
     }
 }
 
-function openSide(pcId) {
+function openSide(labName, pcId) {
     console.log("Openside");
-    document.getElementById("pcIdDisplay").innerHTML = "PC" + pad(pcId, 2);
+    document.getElementById("pcIdDisplay").innerHTML = labName + "-" + pad(pcId, 2);
     document.getElementById("sidebar").style.width = "250px";
     // document.getElementById("content").style.marginLeft = "250px";
 }
