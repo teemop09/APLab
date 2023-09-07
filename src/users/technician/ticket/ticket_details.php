@@ -11,6 +11,7 @@ if (
     isset($_GET["ticket_id"]) &&
     !empty($_GET["ticket_id"])
 ) {
+    var_dump($_GET);
     $ticket_id = $_GET["ticket_id"];
 
     // Sanitize the input to prevent SQL injection
@@ -64,8 +65,11 @@ if (
 
         $comments[] = $comment;
         // At this point $comments is an array of arrays
+        var_dump($row);
+        var_dump($result);
     }
     $query_output['comments'] = $comments;
+    var_dump($row);
 
 }
 
