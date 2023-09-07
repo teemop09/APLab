@@ -82,12 +82,13 @@ $conn->close();
 </head>
 
 <body>
+
     <?php if ($query_output): ?>
-        <h2>Ticket Details</h2>
-        <p>Ticket Number:
+        <div id="site-name">TICKET
             <?php echo $query_output["ticket id"]; ?>
-        </p>
-        <p>PC Name:
+        </div>
+
+        <p>PC Location:
             <?php
             $pc_name = $query_output["pc name"];
             $lab = explode("-", $pc_name)[0] . "-" . explode("-", $pc_name)[1];
@@ -98,7 +99,10 @@ $conn->close();
         <p>Ticket Subject:
             <?php echo $query_output["subject"]; ?>
         </p>
-        <p>Raised On:
+        <p>Ticket Description:
+            <?php echo $query_output["description"]; ?>
+        </p>
+        <p>Issued On:
             <?php echo $query_output["raised on"]; ?>
         </p>
         <?php
@@ -113,8 +117,10 @@ $conn->close();
             <?php echo $query_output["status"]; ?>
         </p>
         <p>Troubleshooting Steps:</p>
+
         <?php if ($query_output['status'] != 'solved'): ?>
-            <form action="add_comment.php" method="post">
+            <button id="start-solving-button">Start solving this ticket</button>
+            <form id="new-comment-form" action="add_comment.php" method="post">
                 <div class="comment-box">
                     <textarea id="new-comment" name="comment" rows="4" cols="50"
                         placeholder="Add your comment here..."></textarea>

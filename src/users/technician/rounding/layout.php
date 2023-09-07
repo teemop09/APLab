@@ -25,7 +25,6 @@ if (
 <body>
     <div class="bg">
         <!-- load Header -->
-
         <div id="headerContainer"></div>
         <script src="/src/users/standard-user/raise-ticket/loadHeader.js"></script>
 
@@ -73,6 +72,7 @@ if (
             </div>
         </div>
         <!-- load Footer -->
+
         <div id="footerContainer"></div>
         <script src="/src/users/standard-user/raise-ticket/loadFooter.js"></script>
     </div>

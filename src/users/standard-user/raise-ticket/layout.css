@@ -1,0 +1,55 @@
+#lab-layout {
+    border: 0px;
+    padding: 0px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    height: 80%;
+
+}
+
+
+path:hover {
+    stroke: aqua;
+}
+
+
+.computer-marker {
+    fill: #00e2ff;
+    fill-rule: evenodd;
+    cursor: pointer;
+    /* -webkit-transform: scale(1); */
+    -webkit-transform-origin: 50% 50%;
+    -webkit-transition: .3s;
+    /* transform: scale(1); */
+    transform-origin: 50% 50%;
+    transition: .3s;
+    transform-box: fill-box;
+}
+
+.computer-marker>path {
+    /* Black outline color */
+    stroke: #000;
+    /* Outline width */
+    stroke-width: 1px;
+}
+
+.computer-marker>.b {
+    fill: black;
+}
+
+.computer-marker.active {
+    cursor: pointer;
+    /* -webkit-transform: scale(1.2); */
+    -webkit-transform-origin: 50% 50%;
+    -webkit-transition: .3s;
+    /* transform: scale(1.2); */
+    transform-origin: 50% 50%;
+    transition: .3s;
+    transform-origin: bottom center;
+}
+
+.computer-marker.active>path {
+    fill: #0092ff !important;
+}
+

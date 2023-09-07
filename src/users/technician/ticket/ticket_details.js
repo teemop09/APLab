@@ -1,5 +1,17 @@
 $(document).ready(function () {
-    // remove all solution buttons if one of them found to be oslution
+    const startSolvingForm = document.getElementById("new-comment-form");
+    if (startSolvingForm != null)
+        startSolvingForm.style.display = "none";
+
+    const startSolvingButton = document.getElementById("start-solving-button");
+    if (startSolvingForm != null)
+        startSolvingButton.addEventListener('click', function (event) {
+            startSolvingForm.style.display = "block";
+            startSolvingButton.style.display = "none";
+            //TODO: notify user
+
+        });
+    // remove all solution buttons if one of them found to be solution
     const comments = document.querySelectorAll('.comment');
     for (let i = 0; i < comments.length; i++) {
         if (comments[i].classList.contains('marked-solution')) {
