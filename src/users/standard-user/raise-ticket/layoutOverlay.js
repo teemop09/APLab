@@ -1,12 +1,16 @@
+var selectedLabName = null;
+
 // open the overlay and load equipment names
 function openOverlay() {
-    const overlay = document.getElementById('overlay');
-    overlay.style.display = 'block';
-
     // Get the selected lab ID
     const selectedLabId = document.getElementById('labSelection').value;
+    selectedLabName = document.getElementById('labSelection').options[document.getElementById('labSelection').selectedIndex].text;
 
     if (selectedLabId) {
+        const overlay = document.getElementById('overlay');
+        overlay.querySelector('#lab-layout').setAttribute('data', '/src/components/layouts/' + selectedLabName + '.php')
+        overlay.querySelector('#lab-layout-name').innerHTML = selectedLabName;
+        overlay.style.display = 'block';
         // AJAX request to retrieve equipment names for the selected lab
         fetch(`fetchFilteredEquipment.php?lab_id=${selectedLabId}`)
             .then((response) => response.json())
@@ -76,4 +80,82 @@ function openOverlay() {
 function closeOverlay() {
     const overlay = document.getElementById('overlay');
     overlay.style.display = 'none';
+}
+
+var activeMarker = null;
+function handleSvgClick(event) {
+    // Ensure the clicked element is an SVG element
+    if (event.target.nodeName === "path" || event.target.nodeName === "circle") {
+        // Check if the clicked element has specific attributes (e.g., data attributes)
+        var computerNumber = event.target.parentNode.getAttribute("data-id");
+
+        event.target.parentNode.classList.toggle("active");
+        toggleScale(event.target.parentNode, 1.2);
+
+        if (activeMarker !== null && activeMarker !== event.target.parentNode) {
+            restore(activeMarker);
+        }
+
+        var pcId = null;
+        // if is active then openSide, if not then closeSide
+        if (event.target.parentNode.classList.contains("active")) {
+            pcId = event.target.parentNode.getAttributeNS(null, "data-id");
+            console.log(pcId);
+        }
+        activeMarker = event.target.parentNode;
+    }
+}
+
+var externalSvg = null;
+$(document).ready(function () {
+    // Get the <object> element
+    externalSvg = document.getElementById("lab-layout");
+    console.log(externalSvg);
+    // Wait for the external SVG to load
+    externalSvg.addEventListener("load", function () {
+        // Access the imported SVG document
+        var svgDoc = externalSvg.contentDocument;
+        var head = svgDoc.querySelector("head");
+        const linkElement = document.createElement("link");
+        linkElement.setAttribute("rel", "stylesheet");
+        linkElement.setAttribute("type", "text/css");
+        linkElement.setAttribute("href", "/src/users/standard-user/raise-ticket/layout.css");
+        head.appendChild(linkElement);
+        // Attach a click event listener to the SVG document
+        svgDoc.addEventListener("click", handleSvgClick);
+    });
+
+    // handle form submission
+    document.querySelector('#overlay-cancel').addEventListener('click', function (event) {
+        closeOverlay();
+        restore(activeMarker);
+        activeMarker = null;
+        document.querySelector('#markComputerButton').innerHTML = "Mark a Computer";
+    });
+    document.querySelector('#overlay-confirm').addEventListener('click', function (event) {
+        var pcNum = pad(activeMarker.getAttributeNS(null, "data-id"), 2);
+        var pcName = selectedLabName + "-" + pcNum;
+        document.querySelector('#markComputerButton').innerHTML = pcName;
+        computerId.value = pcName;
+        closeOverlay();
+    });
+});
+
+
+
+function restore(element) {
+    element.classList.remove("active");
+    element.setAttribute("transform", "scale(1)");
+}
+function toggleScale(element, scaleSize) {
+    if (element.getAttribute("transform") == "scale(" + scaleSize + ")") {
+        element.setAttribute("transform", "scale(1)");
+    } else {
+        element.setAttribute("transform", "scale(" + scaleSize + ")");
+    }
+}
+function pad(num, size) {
+    num = num.toString();
+    while (num.length < size) num = "0" + num;
+    return num;
 }
