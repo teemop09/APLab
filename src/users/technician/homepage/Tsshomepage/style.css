@@ -1,0 +1,215 @@
+.HOMEPAGE {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  position: relative;
+  background-color: #fbfcff;
+}
+
+
+.HOMEPAGE .welcome {
+  position: absolute;
+  top: 240px;
+  left: 380px;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 45px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.HOMEPAGE .pending-ticket {
+  position: absolute;
+  width: 249px;
+  height: 290px;
+  top: 351px;
+  left: 243px;
+}
+
+.HOMEPAGE .overlap-2 {
+  position: relative;
+  width: 247px;
+  height: 290px;
+  background-color: #d9d9d966;
+  border-radius: 5.38px;
+}
+
+.HOMEPAGE .pendingTicketText {
+  position: absolute;
+  top: 227px;
+  left: 33px;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 0.6px;
+  line-height: normal;
+}
+
+.HOMEPAGE .pendingTicketImg {
+  width: 189px;
+  height: 201px;
+  top: 16px;
+  left: 29px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.HOMEPAGE .ticket-history {
+  position: absolute;
+  width: 249px;
+  height: 290px;
+  top: 351px;
+  left: 597px;
+}
+
+.HOMEPAGE .ticketHistoryText {
+  position: absolute;
+  top: 227px;
+  left: 38px;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 0.6px;
+  line-height: normal;
+}
+
+.HOMEPAGE .ticketHistoryImg {
+  width: 189px;
+  height: 201px;
+  top: 16px;
+  left: 29px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.HOMEPAGE .view-lab-layout {
+  position: absolute;
+  width: 249px;
+  height: 290px;
+  top: 686px;
+  left: 243px;
+}
+
+.HOMEPAGE .viewLabLayoutText {
+  position: absolute;
+  top: 227px;
+  left: 23px;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 0.6px;
+  line-height: normal;
+}
+
+.HOMEPAGE .viewLabLayoutImg {
+  width: 189px;
+  height: 201px;
+  top: 16px;
+  left: 29px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.HOMEPAGE .raise-ticket {
+  position: absolute;
+  width: 249px;
+  height: 290px;
+  top: 351px;
+  left: 958px;
+}
+
+.HOMEPAGE .raiseTicketText {
+  position: absolute;
+  width: 160px;
+  top: 227px;
+  left: 43px;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 0.6px;
+  line-height: normal;
+}
+
+.HOMEPAGE .raiseTicketImg {
+  width: 191px;
+  height: 203px;
+  top: 24px;
+  left: 28px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.HOMEPAGE .register-client {
+  position: absolute;
+  width: 249px;
+  height: 290px;
+  top: 686px;
+  left: 597px;
+}
+
+.HOMEPAGE .rectangle {
+  position: absolute;
+  width: 247px;
+  height: 290px;
+  top: 0;
+  left: 22px;
+  background-color: #d9d9d9;
+  border-radius: 5.38px;
+  opacity: 0.4;
+}
+
+.HOMEPAGE .registerClientText {
+  position: absolute;
+  width: 249px;
+  top: 204px;
+  left: 0;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 0.6px;
+  line-height: normal;
+}
+
+.HOMEPAGE .registerAccountImg {
+  width: 189px;
+  height: 201px;
+  top: 16px;
+  left: 29px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.HOMEPAGE .resgiter-TA {
+  position: absolute;
+  width: 249px;
+  height: 290px;
+  top: 686px;
+  left: 958px;
+}
+
+.HOMEPAGE .registerTAText {
+  position: absolute;
+  width: 221px;
+  top: 201px;
+  left: 13px;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 0.6px;
+  line-height: normal;
+}
