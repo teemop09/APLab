@@ -61,15 +61,15 @@ if (
 
             <div class="sidebar" id="sidebar">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeSide()">&times;</a>
-                <a id="pcIdDisplay" href="#">hello</a>
+                <h2 id="pcIdDisplay" href="#"></h2>
                 <div id="ticket-container">
-                    <h2 id="pending-ticket" style="display:none">Pending Tickets</h2>
-                    <div id="pending-ticket-list">
+                    <h3 id="pending-ticket" style="display:none">Pending Tickets</h3>
+                    <div class="ticket-list" id="pending-ticket-list">
                     </div>
-                    <h2 id="past-ticket" style="display:none">Past Tickets</h2>
-                    <div id="past-ticket-list">
+                    <h3 id="past-ticket" style="display:none">Past Tickets</h3>
+                    <div class="ticket-list" id="past-ticket-list">
                     </div>
-                    <h2 id="no-info" style="display:none">No Ticket</h2>
+                    <h3 id="no-info" style="display:none">No Ticket</h3>
                 </div>
             </div>
         </div>
