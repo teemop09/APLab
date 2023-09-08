@@ -1,0 +1,73 @@
+a {
+  color: initial;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: blue;
+}
+
+
+.headerfooter-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+
+.headerfooter-headerfooterbg {
+  top: -2px;
+  left: 0px;
+  width: 100%;
+  height: 1267px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.headerfooter-header {
+  top: 0px;
+  left: 0px;
+  width: 1190px;
+  height: 169px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: #EFF5FF;
+  
+}
+
+.headerfooter-logo,
+.headerfooter-home {
+  display: block; /* Make the <a> elements behave like block-level elements */
+  box-sizing: border-box; /* Include padding and borders in width and height */
+}
+
+.headerfooter-logo {
+  top: 20px;
+  left: 55px;
+  width: 266px;
+  height: 110px;
+  position: absolute;
+}
+
+/* THE ONLY DIFFERENT IN CSS (remove noti icon adjust home icon) */
+.headerfooter-home img {
+  left: 950px;
+  width: 50px;
+  height: 50px;
+  bottom: 14px;
+  position: absolute;
+}
+
+.headerfooter-user img {
+  top: 103px;
+  left: 1021px;
+  width: 56px;
+  height: 56px;
+  position: absolute;
+}
