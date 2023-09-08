@@ -1,6 +1,8 @@
 <?php
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/src/data/conn.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/src/components/protected.php';
+
 ?>
 <!DOCTYPE html>
 <html>
