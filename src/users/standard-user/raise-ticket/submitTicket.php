@@ -122,122 +122,124 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/src/components/protected.php';
     </style>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="/src/users/standard-user/raise-ticket/style.css"/>
     <link rel="stylesheet" href="./layout.css" />
     <link href="submitTicket.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 
 <body>
-    <div class="bg">
+<div class="bg">
         <!-- load Header -->
         <div id="headerContainer"></div>
-        <script src="/src/users/standard-user/headerFooter/loadHeader.js"></script>
+        <script src="loadHeader.js"></script>
+
+        <p class="st-top">SUBMIT A NEW TICKET</p>
+
+        <!-- NEW CREATE FORM START HERE -->
+        <form method="post" action="submitTicketToDB.php" onsubmit="setDateTime()" class="flex-column">
+
+            <div class="st-title flex-row">
+                <p class="st-header">Report An Issue</p>
+                <p><span class="red">*</span> indicates a required field</p>
+            </div>
+
+            <div class="flex-row form-container">
+                <div class="flex-column input-labels">
+                    <div class="short-labels">
+                        <p class="">Submitted By
+                            <span class="red">*</span>
+                        </p>
+                    </div>
+                    <div class="short-labels">
+                        <p>Alternative Email</p>
+                    </div>
+                    <div class="short-labels">
+                        <p class="">Subject <span class="red">*</span></p>
+                    </div>
+                    <div class="tall-labels">
+                        <p class="">Describe the Problem <span class="red">*</span></p>
+                    </div>
+                    <div class="short-labels">
+                        <p class="">Computer Location <span class="red">*</span></p>
+                    </div>
+                    <div class="short-labels">
+                        <p class="">Computer ID / Name <span class="red">*</span></p>
+                    </div>
+                </div>
+
+                <div class="flex-column input-fields">
+
+                    <!-- Form inputs -->
+                    <div class="short-labels">
+                        <input type="text" name="user_id" required>
+                    </div>
+                    <div class="short-labels">
+                        <!-- FIX user ID AFTER INCLUDE session -->
+                        <input type="email" name="alt_email_address" placeholder="e.g. personal email address">
+                    </div>
+                    <div class="short-labels">
+                        <input type="text" name="subject" placeholder="e.g. PC is not booting up / PC freezes randomly" required>
+                    </div>
+                    <div class="tall-labels">
+                        <textarea name="problem_description" placeholder="e.g. Please provide as much detail as possible regrading your inquiry so we can best provide you the most accurate assistance." required></textarea>
+
+                    </div>
+                    <div class="short-labels">
+                        <select name="techlab_id" id="labSelection" required>
+                            <option value="">Please select</option>
+                            <!-- Get lab name from db -->
+                            <?php include 'fetchLabName.php'; ?>
+                        </select>
+                    </div>
+                    <div class="short-labels">
+                        <!-- Input field and "Mark the Computer" button -->
+                        <input type="hidden" name="computer_id" id="computerId" class="submit-ticket-comp-name-input" required>
+                        <button id="markComputerButton" type="button" onclick="openOverlay()" class="submit-ticket-comp-name-input mark-button">Mark a Computer</button>
+
+                        <!-- Overlay MAP LAYOUT HERE? -->
+                        <div id="overlay" class="overlay">
+                            <div class="overlay-content">
+                                <div class="overlay-header">
+                                    <h3 id="lab-layout-name"></h3>
+                                    <button type="button" onclick="closeOverlay()">X</button>
+                                </div>
+
+                                <object data="" type="image/svg+xml" id="lab-layout">
+                                </object>
+                                <div class="overlay-bottom">
+                                    <button id="overlay-cancel" type="button" onclick="closeOverlay()">Cancel</button>
+                                    <button id="overlay-confirm" type="button" onclick="closeOverlay()">Confirm</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- Submit and Reset buttons -->
+            <div class="flex-row button-box">
+
+                <button type="submit" class="submit">
+                    SUBMIT
+                </button>
+
+                <button type="reset" class="cancel">
+                    CANCEL
+                </button>
+
+            </div>
+        </form>
 
         <!-- load Footer -->
         <div id="footerContainer"></div>
-        <script src="/src/users/standard-user/headerFooter/loadFooter.js"></script>
+        <script src="loadFooter.js"></script>
 
-
-        <!-- NEW CREATE FORM START HERE -->
-        <form method="post" action="submitTicketToDB.php" onsubmit="setDateTime()">
-            <span class="submit-ticket-report-an-issue">
-                <span>Report An Issue</span>
-            </span>
-            <span class="submit-ticket-indicates-a-required-field">
-                <span class="required-text">*</span>
-                <span>indicates a required field</span>
-            </span>
-            <span class="submit-ticket-submitted-by">
-                <span class="submit-ticket-text03">Submitted By</span>
-                <span class="required-text">*</span>
-            </span>
-            <span class="submit-ticket-alternative-email">
-                <span>Alternative Email</span>
-            </span>
-            <span class="submit-ticket-subject">
-                <span class="submit-ticket-text07">Subject</span>
-                <span class="required-text">*</span>
-            </span>
-            <span class="submit-ticket-describe-the-problem">
-                <span class="submit-ticket-text08">Describe the Problem</span>
-                <span class="required-text">*</span>
-            </span>
-            <span class="submit-ticket-computer-location">
-                <span class="submit-ticket-text09">Computer Location</span>
-                <span class="required-text">*</span>
-            </span>
-            <span class="submit-ticket-computer-id-name">
-                <span class="submit-ticket-text10">Computer ID / Name</span>
-                <span class="required-text">*</span>
-            </span>
-
-            <!-- Form inputs -->
-            <?php
-            require_once $_SERVER['DOCUMENT_ROOT'] . '/src/data/conn.php';
-            $sql = "SELECT u.user_email AS 'email' FROM user_t u WHERE user_id = ?;";
-            $stmt = $conn->prepare($sql);
-            $stmt->bind_param("s", $_SESSION['userID']);
-            $stmt->execute();
-            $result = $stmt->get_result();
-            $row = $result->fetch_assoc();
-            ?>
-            <input type="text" name="user_id" class="submit-ticket-user-id-input"
-                value="<?= $row == null ? "" : $row['email'] ?>" required>
-            <!-- FIX user ID AFTER INCLUDE session -->
-            <input type="email" name="alt_email_address" class="submit-ticket-alter-email-input"
-                placeholder="  e.g. personal email address">
-            <input type="text" name="subject" class="submit-ticket-subject-input"
-                placeholder="  e.g. PC is not booting up / PC freezes randomly" required>
-            <textarea name="problem_description" class="submit-ticket-problem-input"
-                placeholder="  e.g. Please provide as much detail as possible regrading your inquiry so we can best provide you the most accurate assistance."
-                required></textarea>
-            <select name="techlab_id" id="labSelection" class="submit-ticket-location-input" required>
-                <option value="">Please select</option>
-                <!-- Get lab name from db -->
-                <?php include 'fetchLabName.php'; ?>
-            </select>
-
-
-            <!-- Input field and "Mark the Computer" button -->
-            <input type="hidden" name="computer_id" id="computerId" class="submit-ticket-comp-name-input" required>
-            <button id="markComputerButton" type="button" onclick="openOverlay()"
-                class="submit-ticket-comp-name-input">Mark a Computer</button>
-
-            <!-- Overlay MAP LAYOUT HERE? -->
-            <div id="overlay" class="overlay">
-                <div class="overlay-content">
-                    <div class="overlay-header">
-                        <h3 id="lab-layout-name"></h3>
-                        <button type="button" onclick="closeOverlay()">x</button>
-                    </div>
-
-                    <object data="" type="image/svg+xml" id="lab-layout">
-                    </object>
-                    <div class="overlay-bottom">
-                        <button id="overlay-cancel" type="button" onclick="closeOverlay()">Cancel</button>
-                        <button id="overlay-confirm" type="button" onclick="closeOverlay()">Confirm</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Submit and Reset buttons -->
-            <div class="submit-ticket-submit-button">
-                <button type="submit" class="submit-ticket-submit-box">
-                    <img alt="submitBox" src="/src/assets/header-footer/blueRect.png"
-                        class="submit-ticket-submit-img" />
-                    <span class="submit-ticket-submit-text">SUBMIT</span>
-                </button>
-            </div>
-            <div class="submit-ticket-cancel-button">
-                <button type="reset" class="submit-ticket-cancel-box">
-                    <img alt="ResetBox" src="/src/assets/header-footer/whiteRect.png"
-                        class="submit-ticket-cancel-img" />
-                    <span class="submit-ticket-cancel-text">CANCEL</span>
-                </button>
-            </div>
-
-            <script src="layoutOverlay.js"></script>
+        <script src="layoutOverlay.js"></script>
 </body>
 
 </html>

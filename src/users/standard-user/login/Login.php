@@ -28,7 +28,7 @@ session_start();
 if ($userLogin) {
     $row = $result->fetch_assoc();
     $_SESSION['userID'] = $row["user_id"];
-    header('Location: /src/users/standard-user/homepage/userHomepage.php');
+    header('Location: /src/users/standard-user/raise-ticket/userHomepage.php');
 } else {
     $query = "SELECT * FROM technician_t WHERE tech_email ='$login' AND tech_password ='$passwd' AND tech_role = 'Technical Assistant'";
     $result = mysqli_query($conn, $query);
@@ -40,7 +40,7 @@ if ($userLogin) {
     if ($TALogin) {
         $row = $result->fetch_assoc();
         $_SESSION['userID'] = $row["tech_id"];
-        header('Location: /src/users/technician/homepage/taHomepage.php');
+        header('Location: TAHomePage.php');
     } else {
         $query = "SELECT * FROM technician_t WHERE tech_email ='$login' AND tech_password ='$passwd' AND tech_role = 'Technical Service Staff'";
         $result = mysqli_query($conn, $query);
@@ -52,7 +52,7 @@ if ($userLogin) {
         if ($TSSLogin) {
             $row = $result->fetch_assoc();
             $_SESSION['userID'] = $row["tech_id"];
-            header('Location: /src/users/technician/homepage/tssHomepage.php');
+            header('Location: TSSHomePage.php');
         } else {
             header('Location: Login.html?login_failed');
         }
