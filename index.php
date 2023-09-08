@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-var_dump($_SESSION);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +12,7 @@ var_dump($_SESSION);
 </head>
 
 <body>
-    <a href="./src/users/technician/rounding/layout.php?lab=TL04-05">lablayout</a>
+    <a href="./src/users/technician/rounding/view_layout_home.php">lablayout</a>
     <br>
     <a href="./src/users/technician/ticket/ticket_details.php">ticketdetails</a>
     <br>

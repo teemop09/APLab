@@ -182,7 +182,8 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/src/components/protected.php';
             $result = $stmt->get_result();
             $row = $result->fetch_assoc();
             ?>
-            <input type="text" name="user_id" class="submit-ticket-user-id-input" value="<?= $row['email'] ?>" required>
+            <input type="text" name="user_id" class="submit-ticket-user-id-input"
+                value="<?= $row == null ? "" : $row['email'] ?>" required>
             <!-- FIX user ID AFTER INCLUDE session -->
             <input type="email" name="alt_email_address" class="submit-ticket-alter-email-input"
                 placeholder="  e.g. personal email address">

@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $updateTicketQuery = "UPDATE
                                 `ticket_t` t
                             SET
-                                t.`tic_status` = 'solved',
+                                t.`tic_status` = 'Solved',
                                 t.`tic_close_date` = NOW()
                             WHERE
                                 t.tic_id =(
