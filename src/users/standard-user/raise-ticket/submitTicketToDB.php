@@ -82,9 +82,8 @@ try {
     if ($stmt === false) {
         throw new Exception('Error preparing SQL statement: ' . mysqli_error($conn));
     }
-
+    var_dump($_POST);
     $stmt->bind_param("sssssss", $customID, $_POST['alt_email_address'], $_POST['subject'], $_POST['problem_description'], $_POST['techlab_id'], $equ_id, $_POST['user_id']);
-
     // Execute query
     if (mysqli_stmt_execute($stmt)) {
         echo '<script>alert("Ticket Submitted!"); window.location.href= "submitTicket.php";</script>';

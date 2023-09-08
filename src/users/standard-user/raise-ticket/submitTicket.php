@@ -173,7 +173,16 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/src/components/protected.php';
             </span>
 
             <!-- Form inputs -->
-            <input type="text" name="user_id" class="submit-ticket-user-id-input" required>
+            <?php
+            require_once $_SERVER['DOCUMENT_ROOT'] . '/src/data/conn.php';
+            $sql = "SELECT u.user_email AS 'email' FROM user_t u WHERE user_id = ?;";
+            $stmt = $conn->prepare($sql);
+            $stmt->bind_param("s", $_SESSION['userID']);
+            $stmt->execute();
+            $result = $stmt->get_result();
+            $row = $result->fetch_assoc();
+            ?>
+            <input type="text" name="user_id" class="submit-ticket-user-id-input" value="<?= $row['email'] ?>" required>
             <!-- FIX user ID AFTER INCLUDE session -->
             <input type="email" name="alt_email_address" class="submit-ticket-alter-email-input"
                 placeholder="  e.g. personal email address">

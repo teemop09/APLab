@@ -118,7 +118,7 @@
   </style>
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" />
-  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="/src/users/standard-user/raise-ticket/style.css" />
   <link href="notification.css" rel="stylesheet" />
 </head>
 
@@ -126,11 +126,11 @@
   <div class="bg">
     <!-- load Header -->
     <div id="headerContainer"></div>
-    <script src="loadHeader.js"></script>
+    <script src="/src/users/standard-user/headerFooter/loadHeader.js"></script>
 
     <!-- load Footer -->
     <div id="footerContainer"></div>
-    <script src="loadFooter.js"></script>
+    <script src="/src/users/standard-user/headerFooter/loadFooter.js"></script>
 
     <div class="pageName">
       <h1>Notifications</h1>

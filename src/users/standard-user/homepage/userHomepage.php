@@ -148,12 +148,13 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/src/components/protected.php';
       </a>
 
       <!-- CHECK TICKET (checkTicket.html WILL LINK HERE) -->
-      <div id="checkTicket" class="user-homepage-check-ticket-container button">
+      <a href="/src/users/standard-user/ticket/client_ticket_history.php" target="_top"
+        class="user-homepage-check-ticket-container button">
         <div class="user-homepage-check-box">
           <img alt="checkIcon" src="/src/assets/header-footer/checkTicket.png" class="user-homepage-check-icon" />
           <span class="user-homepage-check-text">Check Ticket Status</span>
         </div>
-      </div>
+      </a>
     </div>
 
     <img alt="ticketPortal" src="/src/assets/header-footer/ticketPortal.png"

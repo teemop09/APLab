@@ -16,6 +16,10 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/src/components/protected.php';
 </head>
 
 <body>
+    <!-- load Header -->
+    <div id="headerContainer"></div>
+    <script src="/src/users/technician/headerFooter/TaTssHeader/loadTaTssHeader.js"></script>
+
     <div id="site-name">TICKET HISTORY</div>
 
     <?php
@@ -108,6 +112,9 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/src/components/protected.php';
     }
     $conn->close();
     ?>
+    <!-- load Footer -->
+    <div id="footerContainer"></div>
+    <script src="/src/users/technician/headerFooter/TaFooter/loadTAfooter.js"></script>
 
 </body>
 

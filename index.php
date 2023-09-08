@@ -17,7 +17,7 @@ var_dump($_SESSION);
     <br>
     <a href="./src/users/technician/ticket/ticket_details.php">ticketdetails</a>
     <br>
-    <a href="./src/users/standard-user/raise-ticket/userHomepage.php">userHomepage</a>
+    <a href="./src/users/standard-user/homepage/userHomepage.php">userHomepage</a>
     <br>
     <a href="./src/users/standard-user/raise-ticket/submitTicket.php">submitTicket</a>
     <br>

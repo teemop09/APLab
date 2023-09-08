@@ -1,5 +1,6 @@
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/src/data/conn.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/src/components/protected.php";
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Retrieve the comment content from the POST request
@@ -24,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 );";
         $stmt = $conn->prepare($query);
         $timestamp = date("Y-m-d H:i:s"); // Current timestamp
-        $tech_id = 'TS0001'; // TODO: get technican ID from POST or session
+        $tech_id = $_SESSION['userID'];
         $stmt->bind_param('ssss', $content, $timestamp, $tic_id, $tech_id);
         $result = $stmt->execute();
         include $_SERVER["DOCUMENT_ROOT"] . "/src/users/technician/ticket/ticket_to_pending.php";
