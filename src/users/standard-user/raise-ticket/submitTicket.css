@@ -1,355 +1,114 @@
-.bg {
-  width: 100%;
-  height: 1265px;
-  display: flex;
-  overflow: hidden;
-  position: relative;
-  align-items: flex-start;
-  flex-shrink: 0;
-  background-color: rgba(250, 251, 255, 1);
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.submit-ticket-indicates-a-required-field {
-  top: 231px;
-  left: 722px;
-  color: rgba(255, 0, 0, 1);
-  height: auto;
-  position: absolute;
+.st-top {
+  font-size: 35px;
+  font-weight: bold;
+  padding: 20px 5%;
+  border-bottom: 3px solid black;
+  background-color: rgb(235, 235, 235);
+}
+
+.st-title {
+  justify-content: space-between;
+  padding: 20px 0px;
+  margin: 0 5%;
+}
+
+.st-header {
   font-size: 27px;
-  font-style: Semi Bold;
-  text-align: left;
-  font-family: Inter;
-  font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-
-.required-text {
-  color: rgba(255, 0, 0, 1);
-}
-
-.submit-ticket-report-an-issue {
-  top: 228px;
-  left: 90px;
-  color: rgba(0, 5, 13, 1);
-  height: auto;
-  position: absolute;
-  font-size: 32px;
-  font-style: Semi Bold;
-  text-align: left;
-  font-family: Inter;
-  font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
   text-decoration: underline;
 }
 
-.submit-ticket-submitted-by {
-  top: 319px;
-  left: 90px;
-  color: rgba(0, 5, 13, 1);
-  height: auto;
-  position: absolute;
-  font-size: 27px;
-  font-style: Medium;
-  text-align: left;
-  font-family: Inter;
-  font-weight: 500;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
+.input-labels p {
+  font-size: 20px;
 }
 
-.submit-ticket-alternative-email {
-  top: 389px;
-  left: 90px;
-  color: rgba(0, 5, 13, 1);
-  height: auto;
-  position: absolute;
-  font-size: 27px;
-  font-style: Medium;
-  text-align: left;
-  font-family: Inter;
-  font-weight: 500;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
+.red {
+  color: red;
 }
 
-.submit-ticket-subject {
-  top: 459px;
-  left: 90px;
-  color: rgba(0, 5, 13, 1);
-  height: auto;
-  position: absolute;
-  font-size: 27px;
-  font-style: Medium;
-  text-align: left;
-  font-family: Inter;
-  font-weight: 500;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
+
+input {
+  display: block;
 }
 
-.submit-ticket-describe-the-problem {
-  top: 529px;
-  left: 90px;
-  color: rgba(0, 5, 13, 1);
-  height: auto;
-  position: absolute;
-  font-size: 27px;
-  font-style: Medium;
-  text-align: left;
-  font-family: Inter;
-  font-weight: 500;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
+.button-box {
+  justify-content: center;
 }
 
-.submit-ticket-computer-location {
-  top: 749px;
-  left: 90px;
-  color: rgba(0, 5, 13, 1);
-  height: auto;
-  position: absolute;
-  font-size: 27px;
-  font-style: Medium;
-  text-align: left;
-  font-family: Inter;
-  font-weight: 500;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
+.button-box button {
+  margin: 20px 30px;
+  padding: 10px 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
-.submit-ticket-computer-id-name {
-  top: 820px;
-  left: 90px;
-  color: rgba(0, 5, 13, 1);
-  height: auto;
-  position: absolute;
-  font-size: 27px;
-  font-style: Medium;
-  text-align: left;
-  font-family: Inter;
-  font-weight: 500;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
+button.submit {
+  background-color: rgb(162, 162, 231);
 }
 
-.submit-ticket-user-id-input {
-  top: 310px;
-  left: 418px;
-  width: 669px;
-  height: 55px;
-  display: flex;
-  position: absolute;
-  align-items: flex-start;
-  flex-shrink: 0;
-  border-color: var(--dl-color-gray-black);
-  border-width: 1px;
-  border-radius: var(--dl-radius-radius-radius8);
-  background-color: var(--dl-color-gray-white);
-  border-right-width: 1px;
+.input-labels {
+  margin: 0px 5%;
+  width: 40%;
 }
 
-.submit-ticket-email-example {
-  top: 12px;
-  left: 13.43701171875px;
-  color: rgb(0, 0, 0);
-  width: 377px;
-  height: auto;
-  opacity: 0.40;
-  position: absolute;
-  font-size: 24px;
-  font-style: Medium;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 500;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
+.short-labels p {
+  margin-top: 2px;
 }
 
-.submit-ticket-alter-email-input {
-  top: 385px;
-  left: 418px;
-  width: 669px;
-  border: 2px dashed rgba(120, 120, 120, 0.4);
-  height: 55px;
-  display: flex;
-  position: absolute;
-  align-items: flex-start;
-  flex-shrink: 0;
-  border-color: #000000;
-  border-style: solid;
-  border-width: 1px;
-  border-radius: var(--dl-radius-radius-radius8);
-  background-color: var(--dl-color-gray-white);
-  border-right-width: 1px;
+.short-labels {
+  height: 60px;
 }
 
-.submit-ticket-subject-input {
-  top: 462px;
-  left: 418px;
-  width: 669px;
-  height: 55px;
-  display: flex;
-  position: absolute;
-  align-items: flex-start;
-  flex-shrink: 0;
-  border-color: #000000;
-  border-style: solid;
-  border-width: 1px;
-  border-radius: var(--dl-radius-radius-radius8);
-  background-color: var(--dl-color-gray-white);
-  border-right-width: 1px;
+.short-labels input, select, textarea, .mark-button {
+  display: block;
+  border: gray 1px solid;
+  width: 100%;
+  height: 30px;
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 5px;
 }
 
-.submit-ticket-subject-example {
-  top: 475px;
-  left: 438px;
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  opacity: 0.40;
-  position: absolute;
-  font-size: 24px;
-  font-style: Medium;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 500;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
+textarea {
+  resize: none;
+  height: 80%;
 }
 
-.submit-ticket-problem-input {
-  top: 537px;
-  left: 418px;
-  width: 668px;
-  height: 177px;
-  display: flex;
-  position: absolute;
-  align-items: flex-start;
-  flex-shrink: 0;
-  border-color: #000000;
-  border-style: solid;
-  border-width: 1px;
-  border-radius: var(--dl-radius-radius-radius8);
-  background-color: var(--dl-color-gray-white);
-  border-right-width: 1px;
+
+.input-fields {
+  margin-right: 5%;
+  width: 100%;
 }
 
-.submit-ticket-problem-example {
-  top: 551px;
-  left: 433px;
-  color: rgba(0, 0, 0, 1);
-  width: 650px;
-  height: auto;
-  opacity: 0.40;
-  position: absolute;
-  font-size: 24px;
-  font-style: Medium;
-  text-align: left;
-  font-family: Inter;
-  font-weight: 500;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
+.tall-labels {
+  height: 200px;
 }
 
-.submit-ticket-location-input {
-  top: 736px;
-  left: 418px;
-  width: 669px;
-  border: 2px dashed rgba(120, 120, 120, 0.4);
-  height: 55px;
-  display: flex;
-  position: absolute;
-  align-items: flex-start;
-  flex-shrink: 0;
-  border-color: #000000;
-  border-style: solid;
-  border-width: 1px;
-  border-radius: var(--dl-radius-radius-radius8);
-  background-color: var(--dl-color-gray-white);
-  border-right-width: 1px;
+object {
+  height: 400px;
+  overflow: hidden;
 }
 
-.submit-ticket-location-example {
-  top: 751px;
-  left: 433px;
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  opacity: 0.70;
-  position: absolute;
-  font-size: 24px;
-  font-style: Medium;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 500;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
+.overlay-header button {
+  padding: 5px;
+  height: 30px;
+  width: 30px;
 }
 
-.submit-ticket-symbol {
-  top: 749px;
-  left: 1048px;
-  color: rgba(0, 0, 0, 1);
-  width: 17px;
-  height: auto;
-  opacity: 0.80;
-  position: absolute;
-  font-size: 24px;
-  font-style: Semi Bold;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 700;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
+.mark-button, select{
+  padding: 3px;
+  cursor: pointer;
+  height: 40px;
 }
 
-.submit-ticket-comp-name-input {
-  top: 813px;
-  left: 417px;
-  width: 669px;
-  height: 55px;
-  display: flex;
-  position: absolute;
-  align-items: flex-start;
-  flex-shrink: 0;
-  border-color: #000000;
-  border-style: solid;
-  border-width: 1px;
-  border-radius: var(--dl-radius-radius-radius8);
-  background-color: EFF5FF;
-  border-right-width: 1px;
-  background-color: white;
+.mark-button {  
+  background-color: rgb(236, 242, 255);
 }
-
-.submit-ticket-name-example {
-  top: 826px;
-  left: 435px;
-  color: rgba(0, 0, 0, 1);
-  height: auto;
-  opacity: 0.70;
-  position: absolute;
-  font-size: 24px;
-  font-style: Medium;
-  text-align: center;
-  font-family: Inter;
-  font-weight: 500;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-
 
 /* Overlay CSS */
 

@@ -91,7 +91,9 @@
   color: rgb(96, 93, 93);
 }
 
-
+.contxt {
+  margin-top: 60px;
+}
 @media screen and (max-width: 600px) {
   .wrapper {
     margin: 10px;
