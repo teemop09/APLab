@@ -1,0 +1,223 @@
+a {
+  color: initial;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: blue;
+}
+
+.headerfooter-footer {
+  left: -1px;
+  width: 1190px;
+  bottom: 0px;
+  height: 256px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: #EFF5FF;
+}
+.headerfooter-footer-logo {
+  top: 30px;
+  left: 35px;
+  width: 256px;
+  height: 100px;
+  position: absolute;
+
+}
+.headerfooter-sitemap {
+  top: 29px;
+  left: 409px;
+  color: rgba(0, 16, 49, 1);
+  height: auto;
+  position: absolute;
+  font-size: 19px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.headerfooter-home1 {
+  top: 64px;
+  left: 429px;
+  color: rgba(0, 16, 49, 1);
+  height: auto;
+  position: absolute;
+  font-size: 17px;
+  font-style: Medium;
+  text-align: left;
+  transition: 0.3s;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.headerfooter-pending-ticket {
+  top: 92px;
+  left: 393px;
+  color: rgba(0, 16, 49, 1);
+  height: auto;
+  position: absolute;
+  font-size: 17px;
+  font-style: Medium;
+  text-align: left;
+  transition: 0.3s;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.headerfooter-ticket-history {
+  top: 120px;
+  left: 395px;
+  color: rgba(0, 16, 49, 1);
+  height: auto;
+  position: absolute;
+  font-size: 17px;
+  font-style: Medium;
+  text-align: left;
+  transition: 0.3s;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.headerfooter-submit-new-ticket {
+  top: 148px;
+  left: 380px;
+  color: rgba(0, 16, 49, 1);
+  height: auto;
+  position: absolute;
+  font-size: 17px;
+  font-style: Medium;
+  text-align: left;
+  transition: 0.3s;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.headerfooter-check-ticket-status {
+  top: 175px;
+  left: 375px;
+  color: rgba(0, 16, 49, 1);
+  height: auto;
+  position: absolute;
+  font-size: 17px;
+  font-style: Medium;
+  text-align: left;
+  transition: 0.3s;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.headerfooter-our-location {
+  top: 29px;
+  left: 608px;
+  color: rgba(0, 16, 49, 1);
+  width: 203px;
+  height: auto;
+  position: absolute;
+  font-size: 19px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.headerfooter-address {
+  top: 65px;
+  left: 608px;
+  color: rgba(0, 16, 49, 1);
+  height: auto;
+  position: absolute;
+  font-size: 17px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.headerfooter-contact-us {
+  top: 29px;
+  left: 883px;
+  color: rgba(0, 16, 49, 1);
+  height: auto;
+  position: absolute;
+  font-size: 19px;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.headerfooter-contact-number {
+  top: 65px;
+  color: rgba(0, 16, 49, 1);
+  right: 154px;
+  height: auto;
+  position: absolute;
+  font-size: 17px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.headerfooter-email-address {
+  top: 100px;
+  color: rgba(0, 16, 49, 1);
+  right: 44px;
+  width: 263px;
+  height: auto;
+  position: absolute;
+  font-size: 17px;
+  font-style: Medium;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.headerfooter-copyright {
+  left: 392px;
+  color: rgba(3, 14, 56, 0.698);
+  bottom: 12px;
+  height: auto;
+  opacity: 0.80;
+  position: absolute;
+  font-size: 16px;
+  font-style: Semi Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
