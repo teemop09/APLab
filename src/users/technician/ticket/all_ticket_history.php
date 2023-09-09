@@ -84,7 +84,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/src/components/protected.php';
             echo "<td>" . $row['status'] . "</td>";
             echo "<td>" . ($row['pic'] == null ? "N/A" : $row['pic']) . "</td>";
             // Details column with a link to the ticket details page
-            echo "<td><a class='details-link' href='ticket_details.php?ticket_id=" . $row['ticket id'] . "'>></a></td>";
+            echo "<td><a class='details-link' href='/src/users/technician/ticket/ticket_details.php?ticket_id=" . $row['ticket id'] . "'>></a></td>";
             echo "</tr>";
         }
         echo "</tbody>";

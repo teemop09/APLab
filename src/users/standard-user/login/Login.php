@@ -13,7 +13,6 @@ $stmt = $conn->prepare($query);
 if (!$stmt) {
     echo "Error: " . $query . "<br>" . $conn->error;
 }
-var_dump($stmt);
 $stmt->bind_param("ss", $login, $passwd);
 $stmt->execute();
 $result = $stmt->get_result();
@@ -28,7 +27,7 @@ session_start();
 if ($userLogin) {
     $row = $result->fetch_assoc();
     $_SESSION['userID'] = $row["user_id"];
-    header('Location: /src/users/standard-user/raise-ticket/userHomepage.php');
+    header('Location: /src/users/standard-user/homepage/userHomepage.php');
 } else {
     $query = "SELECT * FROM technician_t WHERE tech_email ='$login' AND tech_password ='$passwd' AND tech_role = 'Technical Assistant'";
     $result = mysqli_query($conn, $query);
@@ -40,7 +39,7 @@ if ($userLogin) {
     if ($TALogin) {
         $row = $result->fetch_assoc();
         $_SESSION['userID'] = $row["tech_id"];
-        header('Location: TAHomePage.php');
+        header('Location: /src/users/technician/homepage/TAhomepage/TAhomepage.php');
     } else {
         $query = "SELECT * FROM technician_t WHERE tech_email ='$login' AND tech_password ='$passwd' AND tech_role = 'Technical Service Staff'";
         $result = mysqli_query($conn, $query);
@@ -52,7 +51,7 @@ if ($userLogin) {
         if ($TSSLogin) {
             $row = $result->fetch_assoc();
             $_SESSION['userID'] = $row["tech_id"];
-            header('Location: TSSHomePage.php');
+            header('Location: /src/users/technician/homepage/Tsshomepage/Tsshomepage.php');
         } else {
             header('Location: Login.html?login_failed');
         }

@@ -1,3 +1,6 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/src/components/protected.php';
+?>
 <!DOCTYPE html>
 <html lang="english">
 
@@ -118,7 +121,7 @@
   </style>
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" />
-  <link rel="stylesheet" href="/src/users/standard-user/raise-ticket/style.css" />
+  <link rel="stylesheet" href="./style.css" />
   <link href="notification.css" rel="stylesheet" />
 </head>
 
@@ -128,7 +131,7 @@
     <div id="headerContainer"></div>
     <script src="loadHeader.js"></script>
 
-    <div class = "contxt" >
+    <div class="context">
       <div class="pageName">
         <h1>Notifications</h1>
       </div>
@@ -139,10 +142,11 @@
 
         // FIXED user_id (WILL BASED ON SESSION LATER)
         //$user_id = 'TP065210'; //user_id FOR TESTING
-        $user_id = 'TP064985'; //user_id FOR TESTING
-        
+        $user_id = $_SESSION['userID'];
+
         $query = "SELECT * FROM ticket_t WHERE user_id = '$user_id' ORDER BY tic_id DESC";
         $result = mysqli_query($conn, $query);
+
         while ($row = mysqli_fetch_assoc($result)) {
           $ticId = $row['tic_id'];
           $openDate = $row['tic_open_date'];
@@ -151,12 +155,12 @@
           echo '<div class="wrapper">';
           echo '<div class="content">';
           echo '<img src="/src/users/standard-user/notification/assets/notiBell.png">';
-          echo "<b>Your ticket #$ticId issued on $openDate is now: $ticStatus.</b>";
+          echo "<b>Your ticket #$ticId issued on $openDate is [$ticStatus].</b>";
           echo '<br><br>';
 
           if ($ticStatus === "Pending") {
             echo "<span class='small-text grey-text'>$openDate</span>";
-          } elseif ($ticStatus === "Pending (Taken)" || $ticStatus === "Solved") {
+          } elseif ($ticStatus === "In progress" || $ticStatus === "Solved") {
             echo "<span class='small-text grey-text'>" . date("Y-m-d H:i:s") . "</span>";
           }
           echo '</div>';
@@ -166,7 +170,7 @@
         ?>
       </div>
     </div>
-
+  </div>
   <!-- load Footer -->
   <div id="footerContainer"></div>
   <script src="loadFooter.js"></script>

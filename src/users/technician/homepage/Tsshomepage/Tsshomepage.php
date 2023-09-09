@@ -31,7 +31,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/src/components/protected.php';
 
 
   <?php
-  $result = mysqli_query($conn, "SELECT * FROM technician_t");
+  $result = mysqli_query($conn, "SELECT * FROM technician_t WHERE tech_id = '$_SESSION[userID]'");
   $row = mysqli_fetch_array($result);
 
   ?>

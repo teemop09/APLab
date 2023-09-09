@@ -40,7 +40,7 @@ if (
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             $category = "open";
-            if ($row["tic_status"] == "solved") {
+            if ($row["tic_status"] == "Solved") {
                 $category = "past";
             }
             $info = array(

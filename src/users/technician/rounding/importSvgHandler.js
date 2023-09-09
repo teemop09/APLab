@@ -149,7 +149,7 @@ $(document).ready(function () {
                                 markers[i].classList.add("attention");
                             else if (ticketStatus == "Pending (Taken)")
                                 markers[i].classList.add("taken");
-                            else if (ticketStatus == "solved")
+                            else if (ticketStatus == "Solved")
                                 markers[i].classList.add("solved");
 
                         }
